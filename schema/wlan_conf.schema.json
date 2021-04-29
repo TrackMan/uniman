@@ -1,0 +1,90 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "properties": {
+        "meta": {
+            "type": "object",
+            "properties": {
+                "rc": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "rc"
+            ]
+        },
+        "data": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "_id": {
+                        "type": "string"
+                    },
+                    "enabled": {
+                        "type": "boolean"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "security": {
+                        "type": "string"
+                    },
+                    "wpa_enc": {
+                        "type": "string"
+                    },
+                    "wpa_mode": {
+                        "type": "string"
+                    },
+                    "x_passphrase": {
+                        "type": "string"
+                    },
+                    "site_id": {
+                        "type": "string"
+                    },
+                    "usergroup_id": {
+                        "type": "string"
+                    },
+                    "x_iapp_key": {
+                        "type": "string"
+                    },
+                    "no2ghz_oui": {
+                        "type": "boolean"
+                    },
+                    "minrate_ng_enabled": {
+                        "type": "boolean"
+                    },
+                    "minrate_ng_beacon_rate_kbps": {
+                        "type": "integer"
+                    },
+                    "minrate_ng_data_rate_kbps": {
+                        "type": "integer"
+                    },
+                    "pmf_mode": {
+                        "type": "string"
+                    },
+                    "b_supported": {
+                        "type": "boolean"
+                    },
+                    "ap_group_ids": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "wlan_band": {
+                        "type": "string"
+                    },
+                    "networkconf_id": {
+                        "type": "string"
+                    },
+                    "iapp_enabled": {
+                        "type": "boolean"
+                    }
+                },
+                "required": []
+            }
+        }
+    },
+    "required": []
+}

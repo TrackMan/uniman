@@ -1,0 +1,241 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "properties": {
+        "unique_id": {
+            "type": "string"
+        },
+        "first_name": {
+            "type": "string"
+        },
+        "last_name": {
+            "type": "string"
+        },
+        "full_name": {
+            "type": "string"
+        },
+        "email": {
+            "type": "string"
+        },
+        "email_status": {
+            "type": "string"
+        },
+        "phone": {
+            "type": "string"
+        },
+        "avatar_relative_path": {
+            "type": "string"
+        },
+        "avatar_rpath2": {
+            "type": "string"
+        },
+        "status": {
+            "type": "string"
+        },
+        "employee_number": {
+            "type": "string"
+        },
+        "create_time": {
+            "type": "integer"
+        },
+        "extras": {
+            "type": "object"
+        },
+        "username": {
+            "type": "string"
+        },
+        "local_account_exist": {
+            "type": "boolean"
+        },
+        "password_revision": {
+            "type": "integer"
+        },
+        "sso_account": {
+            "type": "string"
+        },
+        "sso_uuid": {
+            "type": "string"
+        },
+        "sso_username": {
+            "type": "string"
+        },
+        "sso_picture": {
+            "type": "string"
+        },
+        "uid_sso_id": {
+            "type": "string"
+        },
+        "uid_sso_account": {
+            "type": "string"
+        },
+        "groups": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "unique_id": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "up_id": {
+                        "type": "string"
+                    },
+                    "up_ids": {
+                        "type": "array"
+                    },
+                    "system_name": {
+                        "type": "string"
+                    },
+                    "create_time": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "create_time",
+                    "name",
+                    "system_name",
+                    "unique_id",
+                    "up_id",
+                    "up_ids"
+                ]
+            }
+        },
+        "roles": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "unique_id": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "system_role": {
+                        "type": "boolean"
+                    },
+                    "system_key": {
+                        "type": "string"
+                    },
+                    "level": {
+                        "type": "integer"
+                    }
+                },
+                "required": [
+                    "level",
+                    "name",
+                    "system_key",
+                    "system_role",
+                    "unique_id"
+                ]
+            }
+        },
+        "permissions": {
+            "type": "object",
+            "properties": {
+                "access.management": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "connect.management": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "led.management": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "network.management": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "protect.management": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "system.management.location": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "system.management.user": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "talk.management": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [
+                "access.management",
+                "connect.management",
+                "led.management",
+                "network.management",
+                "protect.management",
+                "system.management.location",
+                "system.management.user",
+                "talk.management"
+            ]
+        },
+        "scopes": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "cloud_access_granted": {
+            "type": "boolean"
+        },
+        "update_time": {
+            "type": "integer"
+        },
+        "avatar": {
+            "type": "string"
+        },
+        "nfc_token": {
+            "type": "string"
+        },
+        "nfc_display_id": {
+            "type": "string"
+        },
+        "nfc_card_type": {
+            "type": "string"
+        },
+        "nfc_card_status": {
+            "type": "string"
+        },
+        "id": {
+            "type": "string"
+        },
+        "isOwner": {
+            "type": "boolean"
+        },
+        "isSuperAdmin": {
+            "type": "boolean"
+        },
+        "data": {
+            "items": {
+                "required": []
+            }
+        }
+    },
+    "required": []
+}

@@ -1,0 +1,3164 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "properties": {
+        "meta": {
+            "type": "object",
+            "properties": {
+                "rc": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "rc"
+            ]
+        },
+        "data": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "_id": {
+                        "type": "string"
+                    },
+                    "ip": {
+                        "type": "string"
+                    },
+                    "mac": {
+                        "type": "string"
+                    },
+                    "model": {
+                        "type": "string"
+                    },
+                    "model_in_lts": {
+                        "type": "boolean"
+                    },
+                    "model_in_eol": {
+                        "type": "boolean"
+                    },
+                    "type": {
+                        "type": "string"
+                    },
+                    "version": {
+                        "type": "string"
+                    },
+                    "adopted": {
+                        "type": "boolean"
+                    },
+                    "site_id": {
+                        "type": "string"
+                    },
+                    "x_authkey": {
+                        "type": "string"
+                    },
+                    "cfgversion": {
+                        "type": "string"
+                    },
+                    "syslog_key": {
+                        "type": "string"
+                    },
+                    "config_network": {
+                        "type": "object",
+                        "properties": {
+                            "type": {
+                                "type": "string"
+                            },
+                            "ip": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "ip",
+                            "type"
+                        ]
+                    },
+                    "x_vwirekey": {
+                        "type": "string"
+                    },
+                    "vwire_table": {
+                        "type": "array"
+                    },
+                    "dot1x_portctrl_enabled": {
+                        "type": "boolean"
+                    },
+                    "jumboframe_enabled": {
+                        "type": "boolean"
+                    },
+                    "flowctrl_enabled": {
+                        "type": "boolean"
+                    },
+                    "stp_version": {
+                        "type": "string"
+                    },
+                    "stp_priority": {
+                        "type": "string"
+                    },
+                    "power_source_ctrl_enabled": {
+                        "type": "boolean"
+                    },
+                    "license_state": {
+                        "type": "string"
+                    },
+                    "x_fingerprint": {
+                        "type": "string"
+                    },
+                    "inform_url": {
+                        "type": "string"
+                    },
+                    "inform_ip": {
+                        "type": "string"
+                    },
+                    "x_aes_gcm": {
+                        "type": "boolean"
+                    },
+                    "config_network_lan": {
+                        "type": "object",
+                        "properties": {
+                            "cidr": {
+                                "type": "string"
+                            },
+                            "dhcp_enabled": {
+                                "type": "boolean"
+                            },
+                            "dhcp_range_start": {
+                                "type": "string"
+                            },
+                            "dhcp_range_stop": {
+                                "type": "string"
+                            },
+                            "vlan": {
+                                "type": "integer"
+                            }
+                        },
+                        "required": [
+                            "cidr",
+                            "dhcp_enabled",
+                            "dhcp_range_start",
+                            "dhcp_range_stop",
+                            "vlan"
+                        ]
+                    },
+                    "required_version": {
+                        "type": "string"
+                    },
+                    "kernel_version": {
+                        "type": "string"
+                    },
+                    "architecture": {
+                        "type": "string"
+                    },
+                    "board_rev": {
+                        "type": "integer"
+                    },
+                    "manufacturer_id": {
+                        "type": "integer"
+                    },
+                    "model_incompatible": {
+                        "type": "boolean"
+                    },
+                    "internet": {
+                        "type": "boolean"
+                    },
+                    "antenna_table": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "default": {
+                                    "type": "boolean"
+                                },
+                                "id": {
+                                    "type": "integer"
+                                },
+                                "name": {
+                                    "type": "string"
+                                },
+                                "ra0_gain": {
+                                    "type": "integer"
+                                },
+                                "rai0_gain": {
+                                    "type": "integer"
+                                }
+                            },
+                            "required": [
+                                "default",
+                                "id",
+                                "name",
+                                "ra0_gain",
+                                "rai0_gain"
+                            ]
+                        }
+                    },
+                    "radio_table": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "radio": {
+                                    "type": "string"
+                                },
+                                "name": {
+                                    "type": "string"
+                                },
+                                "channel": {
+                                    "type": "string"
+                                },
+                                "ht": {
+                                    "type": "string"
+                                },
+                                "max_txpower": {
+                                    "type": "integer"
+                                },
+                                "min_txpower": {
+                                    "type": "integer"
+                                },
+                                "nss": {
+                                    "type": "integer"
+                                },
+                                "min_rssi_enabled": {
+                                    "type": "boolean"
+                                },
+                                "sens_level_enabled": {
+                                    "type": "boolean"
+                                },
+                                "vwire_enabled": {
+                                    "type": "boolean"
+                                },
+                                "radio_caps": {
+                                    "type": "integer"
+                                },
+                                "builtin_antenna": {
+                                    "type": "boolean"
+                                },
+                                "builtin_ant_gain": {
+                                    "type": "integer"
+                                },
+                                "loadbalance_enabled": {
+                                    "type": "boolean"
+                                },
+                                "current_antenna_gain": {
+                                    "type": "integer"
+                                },
+                                "radio_caps2": {
+                                    "type": "integer"
+                                },
+                                "is_11ac": {
+                                    "type": "boolean"
+                                },
+                                "has_dfs": {
+                                    "type": "boolean"
+                                },
+                                "has_fccdfs": {
+                                    "type": "boolean"
+                                },
+                                "has_ht160": {
+                                    "type": "boolean"
+                                }
+                            },
+                            "required": [
+                                "builtin_ant_gain",
+                                "builtin_antenna",
+                                "channel",
+                                "current_antenna_gain",
+                                "ht",
+                                "loadbalance_enabled",
+                                "max_txpower",
+                                "min_rssi_enabled",
+                                "min_txpower",
+                                "name",
+                                "nss",
+                                "radio",
+                                "radio_caps",
+                                "radio_caps2",
+                                "sens_level_enabled",
+                                "vwire_enabled"
+                            ]
+                        }
+                    },
+                    "scan_radio_table": {
+                        "type": "array"
+                    },
+                    "ethernet_table": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "mac": {
+                                    "type": "string"
+                                },
+                                "num_port": {
+                                    "type": "integer"
+                                },
+                                "name": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "mac",
+                                "name",
+                                "num_port"
+                            ]
+                        }
+                    },
+                    "port_table": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "port_idx": {
+                                    "type": "integer"
+                                },
+                                "media": {
+                                    "type": "string"
+                                },
+                                "port_poe": {
+                                    "type": "boolean"
+                                },
+                                "speed_caps": {
+                                    "type": "integer"
+                                },
+                                "op_mode": {
+                                    "type": "string"
+                                },
+                                "portconf_id": {
+                                    "type": "string"
+                                },
+                                "autoneg": {
+                                    "type": "boolean"
+                                },
+                                "enable": {
+                                    "type": "boolean"
+                                },
+                                "flowctrl_rx": {
+                                    "type": "boolean"
+                                },
+                                "flowctrl_tx": {
+                                    "type": "boolean"
+                                },
+                                "full_duplex": {
+                                    "type": "boolean"
+                                },
+                                "is_uplink": {
+                                    "type": "boolean"
+                                },
+                                "mac": {
+                                    "type": "string"
+                                },
+                                "name": {
+                                    "type": "string"
+                                },
+                                "num_port": {
+                                    "type": "integer"
+                                },
+                                "rx_broadcast": {
+                                    "type": "integer"
+                                },
+                                "rx_bytes": {
+                                    "type": "integer"
+                                },
+                                "rx_dropped": {
+                                    "type": "integer"
+                                },
+                                "rx_errors": {
+                                    "type": "integer"
+                                },
+                                "rx_multicast": {
+                                    "type": "integer"
+                                },
+                                "rx_packets": {
+                                    "type": "integer"
+                                },
+                                "rx_rate": {
+                                    "type": "integer"
+                                },
+                                "rx_rate-max": {
+                                    "type": "integer"
+                                },
+                                "speed": {
+                                    "type": "integer"
+                                },
+                                "tx_broadcast": {
+                                    "type": "integer"
+                                },
+                                "tx_bytes": {
+                                    "type": "integer"
+                                },
+                                "tx_dropped": {
+                                    "type": "integer"
+                                },
+                                "tx_errors": {
+                                    "type": "integer"
+                                },
+                                "tx_multicast": {
+                                    "type": "integer"
+                                },
+                                "tx_packets": {
+                                    "type": "integer"
+                                },
+                                "tx_rate": {
+                                    "type": "integer"
+                                },
+                                "tx_rate-max": {
+                                    "type": "integer"
+                                },
+                                "type": {
+                                    "type": "string"
+                                },
+                                "up": {
+                                    "type": "boolean"
+                                },
+                                "ifname": {
+                                    "type": "string"
+                                },
+                                "ip": {
+                                    "type": "string"
+                                },
+                                "netmask": {
+                                    "type": "string"
+                                },
+                                "tx_bytes-r": {
+                                    "type": "integer"
+                                },
+                                "rx_bytes-r": {
+                                    "type": "integer"
+                                },
+                                "bytes-r": {
+                                    "type": "integer"
+                                },
+                                "port_delta": {
+                                    "type": "object",
+                                    "properties": {
+                                        "time_delta": {
+                                            "type": "integer"
+                                        },
+                                        "time_delta_activity": {
+                                            "type": "integer"
+                                        }
+                                    },
+                                    "required": [
+                                        "time_delta",
+                                        "time_delta_activity"
+                                    ]
+                                },
+                                "network_name": {
+                                    "type": "string"
+                                },
+                                "masked": {
+                                    "type": "boolean"
+                                },
+                                "aggregated_by": {
+                                    "type": "boolean"
+                                },
+                                "mac_table": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "age": {
+                                                "type": "integer"
+                                            },
+                                            "authorized": {
+                                                "type": "boolean"
+                                            },
+                                            "hostname": {
+                                                "type": "string"
+                                            },
+                                            "ip": {
+                                                "type": "string"
+                                            },
+                                            "lastReachable": {
+                                                "type": "integer"
+                                            },
+                                            "mac": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "required": [
+                                            "age",
+                                            "authorized",
+                                            "hostname",
+                                            "ip",
+                                            "lastReachable",
+                                            "mac"
+                                        ]
+                                    }
+                                },
+                                "dns": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            "required": [
+                                "aggregated_by",
+                                "autoneg",
+                                "bytes-r",
+                                "enable",
+                                "flowctrl_rx",
+                                "flowctrl_tx",
+                                "full_duplex",
+                                "ifname",
+                                "ip",
+                                "is_uplink",
+                                "mac",
+                                "masked",
+                                "media",
+                                "name",
+                                "network_name",
+                                "num_port",
+                                "op_mode",
+                                "port_idx",
+                                "port_poe",
+                                "portconf_id",
+                                "rx_broadcast",
+                                "rx_bytes",
+                                "rx_bytes-r",
+                                "rx_dropped",
+                                "rx_errors",
+                                "rx_multicast",
+                                "rx_packets",
+                                "rx_rate",
+                                "rx_rate-max",
+                                "speed",
+                                "speed_caps",
+                                "tx_broadcast",
+                                "tx_bytes",
+                                "tx_bytes-r",
+                                "tx_dropped",
+                                "tx_errors",
+                                "tx_multicast",
+                                "tx_packets",
+                                "tx_rate",
+                                "tx_rate-max",
+                                "type",
+                                "up"
+                            ]
+                        }
+                    },
+                    "ethernet_overrides": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "ifname": {
+                                    "type": "string"
+                                },
+                                "networkgroup": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "ifname",
+                                "networkgroup"
+                            ]
+                        }
+                    },
+                    "usg_caps": {
+                        "type": "integer"
+                    },
+                    "has_speaker": {
+                        "type": "boolean"
+                    },
+                    "has_eth1": {
+                        "type": "boolean"
+                    },
+                    "fw_caps": {
+                        "type": "integer"
+                    },
+                    "hw_caps": {
+                        "type": "integer"
+                    },
+                    "wifi_caps": {
+                        "type": "integer"
+                    },
+                    "switch_caps": {
+                        "type": "object",
+                        "properties": {
+                            "max_mirror_sessions": {
+                                "type": "integer"
+                            },
+                            "max_aggregate_sessions": {
+                                "type": "integer"
+                            }
+                        },
+                        "required": [
+                            "max_aggregate_sessions",
+                            "max_mirror_sessions"
+                        ]
+                    },
+                    "has_fan": {
+                        "type": "boolean"
+                    },
+                    "has_temperature": {
+                        "type": "boolean"
+                    },
+                    "temperatures": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "type": {
+                                    "type": "string"
+                                },
+                                "value": {
+                                    "type": "number"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "type",
+                                "value"
+                            ]
+                        }
+                    },
+                    "storage": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "mount_point": {
+                                    "type": "string"
+                                },
+                                "name": {
+                                    "type": "string"
+                                },
+                                "size": {
+                                    "type": "integer"
+                                },
+                                "type": {
+                                    "type": "string"
+                                },
+                                "used": {
+                                    "type": "integer"
+                                }
+                            },
+                            "required": [
+                                "mount_point",
+                                "name",
+                                "size",
+                                "type",
+                                "used"
+                            ]
+                        }
+                    },
+                    "ruleset_interfaces": {
+                        "type": "object",
+                        "properties": {
+                            "br0": {
+                                "type": "string"
+                            },
+                            "eth4": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "br0",
+                            "eth4"
+                        ]
+                    },
+                    "country_code": {
+                        "type": "integer"
+                    },
+                    "countrycode_table": {
+                        "type": "array"
+                    },
+                    "connected_at": {
+                        "type": "integer"
+                    },
+                    "provisioned_at": {
+                        "type": "integer"
+                    },
+                    "setup_provision_completed": {
+                        "type": "boolean"
+                    },
+                    "setup_provision_tracking": {
+                        "type": "boolean"
+                    },
+                    "unifi_care": {
+                        "type": "object",
+                        "properties": {
+                            "state": {
+                                "type": "string"
+                            },
+                            "registration": {
+                                "type": "integer"
+                            },
+                            "activation_end": {
+                                "type": "null"
+                            },
+                            "activation_url": {
+                                "type": "null"
+                            },
+                            "coverage_start": {
+                                "type": "null"
+                            },
+                            "coverage_end": {
+                                "type": "null"
+                            },
+                            "rma_url": {
+                                "type": "null"
+                            },
+                            "tracking_url": {
+                                "type": "null"
+                            },
+                            "activation_dismissed": {
+                                "type": "null"
+                            }
+                        },
+                        "required": [
+                            "activation_dismissed",
+                            "activation_end",
+                            "activation_url",
+                            "coverage_end",
+                            "coverage_start",
+                            "registration",
+                            "rma_url",
+                            "state",
+                            "tracking_url"
+                        ]
+                    },
+                    "unsupported": {
+                        "type": "boolean"
+                    },
+                    "unsupported_reason": {
+                        "type": "integer"
+                    },
+                    "wlangroup_id_na": {
+                        "type": "string"
+                    },
+                    "wlangroup_id_ng": {
+                        "type": "string"
+                    },
+                    "bandsteering_mode": {
+                        "type": "string"
+                    },
+                    "atf_enabled": {
+                        "type": "boolean"
+                    },
+                    "two_phase_adopt": {
+                        "type": "boolean"
+                    },
+                    "serial": {
+                        "type": "string"
+                    },
+                    "hash_id": {
+                        "type": "string"
+                    },
+                    "anon_id": {
+                        "type": "string"
+                    },
+                    "device_id": {
+                        "type": "string"
+                    },
+                    "state": {
+                        "type": "integer"
+                    },
+                    "start_disconnected_millis": {
+                        "type": "integer"
+                    },
+                    "x_inform_authkey": {
+                        "type": "string"
+                    },
+                    "last_seen": {
+                        "type": "integer"
+                    },
+                    "upgradable": {
+                        "type": "boolean"
+                    },
+                    "adoptable_when_upgraded": {
+                        "type": "boolean"
+                    },
+                    "rollupgrade": {
+                        "type": "boolean"
+                    },
+                    "known_cfgversion": {
+                        "type": "string"
+                    },
+                    "uptime": {
+                        "type": "integer"
+                    },
+                    "_uptime": {
+                        "type": "integer"
+                    },
+                    "locating": {
+                        "type": "boolean"
+                    },
+                    "start_connected_millis": {
+                        "type": "integer"
+                    },
+                    "sys_stats": {
+                        "type": "object",
+                        "properties": {
+                            "loadavg_1": {
+                                "type": "string"
+                            },
+                            "loadavg_15": {
+                                "type": "string"
+                            },
+                            "loadavg_5": {
+                                "type": "string"
+                            },
+                            "mem_buffer": {
+                                "type": "integer"
+                            },
+                            "mem_total": {
+                                "type": "integer"
+                            },
+                            "mem_used": {
+                                "type": "integer"
+                            }
+                        },
+                        "required": [
+                            "loadavg_1",
+                            "loadavg_15",
+                            "loadavg_5",
+                            "mem_buffer",
+                            "mem_total",
+                            "mem_used"
+                        ]
+                    },
+                    "system-stats": {
+                        "type": "object",
+                        "properties": {
+                            "cpu": {
+                                "type": "string"
+                            },
+                            "mem": {
+                                "type": "string"
+                            },
+                            "uptime": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "cpu",
+                            "mem",
+                            "uptime"
+                        ]
+                    },
+                    "lldp_table": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "chassis_id": {
+                                    "type": "string"
+                                },
+                                "is_wired": {
+                                    "type": "boolean"
+                                },
+                                "local_port_idx": {
+                                    "type": "integer"
+                                },
+                                "local_port_name": {
+                                    "type": "string"
+                                },
+                                "port_id": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "chassis_id",
+                                "is_wired",
+                                "local_port_idx",
+                                "local_port_name",
+                                "port_id"
+                            ]
+                        }
+                    },
+                    "guest_kicks": {
+                        "type": "integer"
+                    },
+                    "guest_token": {
+                        "type": "string"
+                    },
+                    "scanning": {
+                        "type": "boolean"
+                    },
+                    "spectrum_scanning": {
+                        "type": "boolean"
+                    },
+                    "meshv3_peer_mac": {
+                        "type": "string"
+                    },
+                    "element_peer_mac": {
+                        "type": "string"
+                    },
+                    "satisfaction": {
+                        "type": "integer"
+                    },
+                    "uptime_stats": {
+                        "type": "object",
+                        "properties": {
+                            "WAN": {
+                                "type": "object",
+                                "properties": {
+                                    "availability": {
+                                        "type": "number"
+                                    },
+                                    "latency_average": {
+                                        "type": "integer"
+                                    },
+                                    "time_period": {
+                                        "type": "integer"
+                                    }
+                                },
+                                "required": [
+                                    "availability",
+                                    "latency_average",
+                                    "time_period"
+                                ]
+                            }
+                        },
+                        "required": [
+                            "WAN"
+                        ]
+                    },
+                    "overheating": {
+                        "type": "boolean"
+                    },
+                    "geo_info": {
+                        "type": "object",
+                        "properties": {
+                            "WAN": {
+                                "type": "object",
+                                "properties": {
+                                    "accuracy": {
+                                        "type": "number"
+                                    },
+                                    "address": {
+                                        "type": "string"
+                                    },
+                                    "asn": {
+                                        "type": "integer"
+                                    },
+                                    "city": {
+                                        "type": "string"
+                                    },
+                                    "continent_code": {
+                                        "type": "string"
+                                    },
+                                    "country_code": {
+                                        "type": "string"
+                                    },
+                                    "country_name": {
+                                        "type": "string"
+                                    },
+                                    "isp_name": {
+                                        "type": "string"
+                                    },
+                                    "isp_organization": {
+                                        "type": "string"
+                                    },
+                                    "latitude": {
+                                        "type": "number"
+                                    },
+                                    "longitude": {
+                                        "type": "number"
+                                    },
+                                    "timezone": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "accuracy",
+                                    "address",
+                                    "asn",
+                                    "city",
+                                    "continent_code",
+                                    "country_code",
+                                    "country_name",
+                                    "isp_name",
+                                    "isp_organization",
+                                    "latitude",
+                                    "longitude",
+                                    "timezone"
+                                ]
+                            }
+                        },
+                        "required": [
+                            "WAN"
+                        ]
+                    },
+                    "led_state": {
+                        "type": "object",
+                        "properties": {
+                            "pattern": {
+                                "type": "string"
+                            },
+                            "tempo": {
+                                "type": "integer"
+                            }
+                        },
+                        "required": [
+                            "pattern",
+                            "tempo"
+                        ]
+                    },
+                    "isolated": {
+                        "type": "boolean"
+                    },
+                    "radio_table_stats": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "channel": {
+                                    "type": "integer"
+                                },
+                                "radio": {
+                                    "type": "string"
+                                },
+                                "ast_txto": {
+                                    "type": "null"
+                                },
+                                "ast_cst": {
+                                    "type": "null"
+                                },
+                                "ast_be_xmit": {
+                                    "type": [
+                                        "integer",
+                                        "null"
+                                    ]
+                                },
+                                "cu_total": {
+                                    "type": "integer"
+                                },
+                                "cu_self_rx": {
+                                    "type": "integer"
+                                },
+                                "cu_self_tx": {
+                                    "type": "integer"
+                                },
+                                "gain": {
+                                    "type": "integer"
+                                },
+                                "satisfaction": {
+                                    "type": "integer"
+                                },
+                                "state": {
+                                    "type": "string"
+                                },
+                                "extchannel": {
+                                    "type": "integer"
+                                },
+                                "tx_power": {
+                                    "type": "integer"
+                                },
+                                "tx_packets": {
+                                    "type": "integer"
+                                },
+                                "tx_retries": {
+                                    "type": "integer"
+                                },
+                                "num_sta": {
+                                    "type": "integer"
+                                },
+                                "guest-num_sta": {
+                                    "type": "integer"
+                                },
+                                "user-num_sta": {
+                                    "type": "integer"
+                                }
+                            },
+                            "required": [
+                                "ast_be_xmit",
+                                "ast_cst",
+                                "ast_txto",
+                                "channel",
+                                "cu_self_rx",
+                                "cu_self_tx",
+                                "cu_total",
+                                "extchannel",
+                                "gain",
+                                "guest-num_sta",
+                                "name",
+                                "num_sta",
+                                "radio",
+                                "satisfaction",
+                                "state",
+                                "tx_packets",
+                                "tx_power",
+                                "tx_retries",
+                                "user-num_sta"
+                            ]
+                        }
+                    },
+                    "speedtest-status": {
+                        "type": "object",
+                        "properties": {
+                            "latency": {
+                                "type": "integer"
+                            },
+                            "rundate": {
+                                "type": "integer"
+                            },
+                            "runtime": {
+                                "type": "integer"
+                            },
+                            "server": {
+                                "type": "object",
+                                "properties": {
+                                    "cc": {
+                                        "type": "string"
+                                    },
+                                    "city": {
+                                        "type": "string"
+                                    },
+                                    "country": {
+                                        "type": "string"
+                                    },
+                                    "lat": {
+                                        "type": "number"
+                                    },
+                                    "lon": {
+                                        "type": "number"
+                                    },
+                                    "provider": {
+                                        "type": "string"
+                                    },
+                                    "provider_url": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "cc",
+                                    "city",
+                                    "country",
+                                    "lat",
+                                    "lon",
+                                    "provider",
+                                    "provider_url"
+                                ]
+                            },
+                            "source_interface": {
+                                "type": "string"
+                            },
+                            "status_download": {
+                                "type": "integer"
+                            },
+                            "status_ping": {
+                                "type": "integer"
+                            },
+                            "status_summary": {
+                                "type": "integer"
+                            },
+                            "status_upload": {
+                                "type": "integer"
+                            },
+                            "xput_download": {
+                                "type": "number"
+                            },
+                            "xput_upload": {
+                                "type": "number"
+                            }
+                        },
+                        "required": [
+                            "latency",
+                            "rundate",
+                            "runtime",
+                            "server",
+                            "source_interface",
+                            "status_download",
+                            "status_ping",
+                            "status_summary",
+                            "status_upload",
+                            "xput_download",
+                            "xput_upload"
+                        ]
+                    },
+                    "speedtest-status-saved": {
+                        "type": "boolean"
+                    },
+                    "wan1": {
+                        "type": "object",
+                        "properties": {
+                            "max_speed": {
+                                "type": "integer"
+                            },
+                            "type": {
+                                "type": "string"
+                            },
+                            "autoneg": {
+                                "type": "boolean"
+                            },
+                            "enable": {
+                                "type": "boolean"
+                            },
+                            "flowctrl_rx": {
+                                "type": "boolean"
+                            },
+                            "flowctrl_tx": {
+                                "type": "boolean"
+                            },
+                            "full_duplex": {
+                                "type": "boolean"
+                            },
+                            "is_uplink": {
+                                "type": "boolean"
+                            },
+                            "mac": {
+                                "type": "string"
+                            },
+                            "mac_table": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "age": {
+                                            "type": "integer"
+                                        },
+                                        "authorized": {
+                                            "type": "boolean"
+                                        },
+                                        "hostname": {
+                                            "type": "string"
+                                        },
+                                        "ip": {
+                                            "type": "string"
+                                        },
+                                        "lastReachable": {
+                                            "type": "integer"
+                                        },
+                                        "mac": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "age",
+                                        "authorized",
+                                        "hostname",
+                                        "ip",
+                                        "lastReachable",
+                                        "mac"
+                                    ]
+                                }
+                            },
+                            "media": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "num_port": {
+                                "type": "integer"
+                            },
+                            "port_idx": {
+                                "type": "integer"
+                            },
+                            "port_poe": {
+                                "type": "boolean"
+                            },
+                            "rx_broadcast": {
+                                "type": "integer"
+                            },
+                            "rx_bytes": {
+                                "type": "integer"
+                            },
+                            "rx_dropped": {
+                                "type": "integer"
+                            },
+                            "rx_errors": {
+                                "type": "integer"
+                            },
+                            "rx_multicast": {
+                                "type": "integer"
+                            },
+                            "rx_packets": {
+                                "type": "integer"
+                            },
+                            "rx_rate": {
+                                "type": "integer"
+                            },
+                            "rx_rate-max": {
+                                "type": "integer"
+                            },
+                            "speed": {
+                                "type": "integer"
+                            },
+                            "speed_caps": {
+                                "type": "integer"
+                            },
+                            "tx_broadcast": {
+                                "type": "integer"
+                            },
+                            "tx_bytes": {
+                                "type": "integer"
+                            },
+                            "tx_dropped": {
+                                "type": "integer"
+                            },
+                            "tx_errors": {
+                                "type": "integer"
+                            },
+                            "tx_multicast": {
+                                "type": "integer"
+                            },
+                            "tx_packets": {
+                                "type": "integer"
+                            },
+                            "tx_rate": {
+                                "type": "integer"
+                            },
+                            "tx_rate-max": {
+                                "type": "integer"
+                            },
+                            "up": {
+                                "type": "boolean"
+                            },
+                            "ifname": {
+                                "type": "string"
+                            },
+                            "ip": {
+                                "type": "string"
+                            },
+                            "netmask": {
+                                "type": "string"
+                            },
+                            "tx_bytes-r": {
+                                "type": "integer"
+                            },
+                            "rx_bytes-r": {
+                                "type": "integer"
+                            },
+                            "bytes-r": {
+                                "type": "integer"
+                            },
+                            "dns": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "required": [
+                            "autoneg",
+                            "bytes-r",
+                            "dns",
+                            "enable",
+                            "flowctrl_rx",
+                            "flowctrl_tx",
+                            "full_duplex",
+                            "ifname",
+                            "ip",
+                            "is_uplink",
+                            "mac",
+                            "mac_table",
+                            "max_speed",
+                            "media",
+                            "name",
+                            "netmask",
+                            "num_port",
+                            "port_idx",
+                            "port_poe",
+                            "rx_broadcast",
+                            "rx_bytes",
+                            "rx_bytes-r",
+                            "rx_dropped",
+                            "rx_errors",
+                            "rx_multicast",
+                            "rx_packets",
+                            "rx_rate",
+                            "rx_rate-max",
+                            "speed",
+                            "speed_caps",
+                            "tx_broadcast",
+                            "tx_bytes",
+                            "tx_bytes-r",
+                            "tx_dropped",
+                            "tx_errors",
+                            "tx_multicast",
+                            "tx_packets",
+                            "tx_rate",
+                            "tx_rate-max",
+                            "type",
+                            "up"
+                        ]
+                    },
+                    "uplink": {
+                        "type": "object",
+                        "properties": {
+                            "drops": {
+                                "type": "integer"
+                            },
+                            "ip": {
+                                "type": "string"
+                            },
+                            "latency": {
+                                "type": "integer"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "nameservers": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            "netmask": {
+                                "type": "string"
+                            },
+                            "num_port": {
+                                "type": "integer"
+                            },
+                            "rx_bytes": {
+                                "type": "integer"
+                            },
+                            "rx_dropped": {
+                                "type": "integer"
+                            },
+                            "rx_errors": {
+                                "type": "integer"
+                            },
+                            "rx_multicast": {
+                                "type": "integer"
+                            },
+                            "rx_packets": {
+                                "type": "integer"
+                            },
+                            "speedtest_lastrun": {
+                                "type": "integer"
+                            },
+                            "speedtest_ping": {
+                                "type": "integer"
+                            },
+                            "speedtest_status": {
+                                "type": "string"
+                            },
+                            "tx_bytes": {
+                                "type": "integer"
+                            },
+                            "tx_dropped": {
+                                "type": "integer"
+                            },
+                            "tx_errors": {
+                                "type": "integer"
+                            },
+                            "tx_packets": {
+                                "type": "integer"
+                            },
+                            "up": {
+                                "type": "boolean"
+                            },
+                            "uptime": {
+                                "type": "integer"
+                            },
+                            "xput_down": {
+                                "type": "number"
+                            },
+                            "xput_up": {
+                                "type": "number"
+                            },
+                            "port_idx": {
+                                "type": "integer"
+                            },
+                            "media": {
+                                "type": "string"
+                            },
+                            "rx_rate": {
+                                "type": "integer"
+                            },
+                            "tx_rate": {
+                                "type": "integer"
+                            },
+                            "max_speed": {
+                                "type": "integer"
+                            },
+                            "type": {
+                                "type": "string"
+                            },
+                            "speed": {
+                                "type": "integer"
+                            },
+                            "full_duplex": {
+                                "type": "boolean"
+                            },
+                            "tx_bytes-r": {
+                                "type": "integer"
+                            },
+                            "rx_bytes-r": {
+                                "type": "integer"
+                            }
+                        },
+                        "required": [
+                            "drops",
+                            "full_duplex",
+                            "ip",
+                            "latency",
+                            "max_speed",
+                            "media",
+                            "name",
+                            "nameservers",
+                            "netmask",
+                            "num_port",
+                            "port_idx",
+                            "rx_bytes",
+                            "rx_bytes-r",
+                            "rx_dropped",
+                            "rx_errors",
+                            "rx_multicast",
+                            "rx_packets",
+                            "rx_rate",
+                            "speed",
+                            "speedtest_lastrun",
+                            "speedtest_ping",
+                            "speedtest_status",
+                            "tx_bytes",
+                            "tx_bytes-r",
+                            "tx_dropped",
+                            "tx_errors",
+                            "tx_packets",
+                            "tx_rate",
+                            "type",
+                            "up",
+                            "uptime",
+                            "xput_down",
+                            "xput_up"
+                        ]
+                    },
+                    "vap_table": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "anomalies_bar_chart": {
+                                    "type": "object",
+                                    "properties": {
+                                        "high_dns_latency": {
+                                            "type": "integer"
+                                        },
+                                        "high_icmp_rtt": {
+                                            "type": "integer"
+                                        },
+                                        "high_tcp_latency": {
+                                            "type": "integer"
+                                        },
+                                        "high_tcp_packet_loss": {
+                                            "type": "integer"
+                                        },
+                                        "high_wifi_latency": {
+                                            "type": "integer"
+                                        },
+                                        "high_wifi_retries": {
+                                            "type": "integer"
+                                        },
+                                        "low_phy_rate": {
+                                            "type": "integer"
+                                        },
+                                        "poor_stream_eff": {
+                                            "type": "integer"
+                                        },
+                                        "sleepy_client": {
+                                            "type": "integer"
+                                        },
+                                        "sta_arp_timeout": {
+                                            "type": "integer"
+                                        },
+                                        "sta_dns_timeout": {
+                                            "type": "integer"
+                                        },
+                                        "sta_ip_timeout": {
+                                            "type": "integer"
+                                        },
+                                        "weak_signal": {
+                                            "type": "integer"
+                                        }
+                                    },
+                                    "required": [
+                                        "high_dns_latency",
+                                        "high_icmp_rtt",
+                                        "high_tcp_latency",
+                                        "high_tcp_packet_loss",
+                                        "high_wifi_latency",
+                                        "high_wifi_retries",
+                                        "low_phy_rate",
+                                        "poor_stream_eff",
+                                        "sleepy_client",
+                                        "sta_arp_timeout",
+                                        "sta_dns_timeout",
+                                        "sta_ip_timeout",
+                                        "weak_signal"
+                                    ]
+                                },
+                                "anomalies_bar_chart_now": {
+                                    "type": "object",
+                                    "properties": {
+                                        "high_dns_latency": {
+                                            "type": "integer"
+                                        },
+                                        "high_icmp_rtt": {
+                                            "type": "integer"
+                                        },
+                                        "high_tcp_latency": {
+                                            "type": "integer"
+                                        },
+                                        "high_tcp_packet_loss": {
+                                            "type": "integer"
+                                        },
+                                        "high_wifi_latency": {
+                                            "type": "integer"
+                                        },
+                                        "high_wifi_retries": {
+                                            "type": "integer"
+                                        },
+                                        "low_phy_rate": {
+                                            "type": "integer"
+                                        },
+                                        "poor_stream_eff": {
+                                            "type": "integer"
+                                        },
+                                        "sleepy_client": {
+                                            "type": "integer"
+                                        },
+                                        "sta_arp_timeout": {
+                                            "type": "integer"
+                                        },
+                                        "sta_dns_timeout": {
+                                            "type": "integer"
+                                        },
+                                        "sta_ip_timeout": {
+                                            "type": "integer"
+                                        },
+                                        "weak_signal": {
+                                            "type": "integer"
+                                        }
+                                    },
+                                    "required": [
+                                        "high_dns_latency",
+                                        "high_icmp_rtt",
+                                        "high_tcp_latency",
+                                        "high_tcp_packet_loss",
+                                        "high_wifi_latency",
+                                        "high_wifi_retries",
+                                        "low_phy_rate",
+                                        "poor_stream_eff",
+                                        "sleepy_client",
+                                        "sta_arp_timeout",
+                                        "sta_dns_timeout",
+                                        "sta_ip_timeout",
+                                        "weak_signal"
+                                    ]
+                                },
+                                "avg_client_signal": {
+                                    "type": "integer"
+                                },
+                                "bssid": {
+                                    "type": "string"
+                                },
+                                "bw": {
+                                    "type": "integer"
+                                },
+                                "ccq": {
+                                    "type": "integer"
+                                },
+                                "channel": {
+                                    "type": "integer"
+                                },
+                                "dns_avg_latency": {
+                                    "type": "integer"
+                                },
+                                "essid": {
+                                    "type": "string"
+                                },
+                                "extchannel": {
+                                    "type": "integer"
+                                },
+                                "icmp_avg_rtt": {
+                                    "type": "integer"
+                                },
+                                "id": {
+                                    "type": "string"
+                                },
+                                "mac_filter_rejections": {
+                                    "type": "integer"
+                                },
+                                "name": {
+                                    "type": "string"
+                                },
+                                "num_satisfaction_sta": {
+                                    "type": "integer"
+                                },
+                                "num_sta": {
+                                    "type": "integer"
+                                },
+                                "radio": {
+                                    "type": "string"
+                                },
+                                "radio_name": {
+                                    "type": "string"
+                                },
+                                "reasons_bar_chart": {
+                                    "type": "object",
+                                    "properties": {
+                                        "phy_rate": {
+                                            "type": "integer"
+                                        },
+                                        "signal": {
+                                            "type": "integer"
+                                        },
+                                        "sleepy_client": {
+                                            "type": "integer"
+                                        },
+                                        "sta_arp_timeout": {
+                                            "type": "integer"
+                                        },
+                                        "sta_dns_latency": {
+                                            "type": "integer"
+                                        },
+                                        "sta_dns_timeout": {
+                                            "type": "integer"
+                                        },
+                                        "sta_icmp_rtt": {
+                                            "type": "integer"
+                                        },
+                                        "sta_ip_timeout": {
+                                            "type": "integer"
+                                        },
+                                        "stream_eff": {
+                                            "type": "integer"
+                                        },
+                                        "tcp_latency": {
+                                            "type": "integer"
+                                        },
+                                        "tcp_packet_loss": {
+                                            "type": "integer"
+                                        },
+                                        "wifi_latency": {
+                                            "type": "integer"
+                                        },
+                                        "wifi_retries": {
+                                            "type": "integer"
+                                        }
+                                    },
+                                    "required": [
+                                        "phy_rate",
+                                        "signal",
+                                        "sleepy_client",
+                                        "sta_arp_timeout",
+                                        "sta_dns_latency",
+                                        "sta_dns_timeout",
+                                        "sta_icmp_rtt",
+                                        "sta_ip_timeout",
+                                        "stream_eff",
+                                        "tcp_latency",
+                                        "tcp_packet_loss",
+                                        "wifi_latency",
+                                        "wifi_retries"
+                                    ]
+                                },
+                                "reasons_bar_chart_now": {
+                                    "type": "object",
+                                    "properties": {
+                                        "phy_rate": {
+                                            "type": "integer"
+                                        },
+                                        "signal": {
+                                            "type": "integer"
+                                        },
+                                        "sleepy_client": {
+                                            "type": "integer"
+                                        },
+                                        "sta_arp_timeout": {
+                                            "type": "integer"
+                                        },
+                                        "sta_dns_latency": {
+                                            "type": "integer"
+                                        },
+                                        "sta_dns_timeout": {
+                                            "type": "integer"
+                                        },
+                                        "sta_icmp_rtt": {
+                                            "type": "integer"
+                                        },
+                                        "sta_ip_timeout": {
+                                            "type": "integer"
+                                        },
+                                        "stream_eff": {
+                                            "type": "integer"
+                                        },
+                                        "tcp_latency": {
+                                            "type": "integer"
+                                        },
+                                        "tcp_packet_loss": {
+                                            "type": "integer"
+                                        },
+                                        "wifi_latency": {
+                                            "type": "integer"
+                                        },
+                                        "wifi_retries": {
+                                            "type": "integer"
+                                        }
+                                    },
+                                    "required": [
+                                        "phy_rate",
+                                        "signal",
+                                        "sleepy_client",
+                                        "sta_arp_timeout",
+                                        "sta_dns_latency",
+                                        "sta_dns_timeout",
+                                        "sta_icmp_rtt",
+                                        "sta_ip_timeout",
+                                        "stream_eff",
+                                        "tcp_latency",
+                                        "tcp_packet_loss",
+                                        "wifi_latency",
+                                        "wifi_retries"
+                                    ]
+                                },
+                                "rx_bytes": {
+                                    "type": "integer"
+                                },
+                                "rx_crypts": {
+                                    "type": "integer"
+                                },
+                                "rx_dropped": {
+                                    "type": "integer"
+                                },
+                                "rx_errors": {
+                                    "type": "integer"
+                                },
+                                "rx_frags": {
+                                    "type": "integer"
+                                },
+                                "rx_nwids": {
+                                    "type": "integer"
+                                },
+                                "rx_packets": {
+                                    "type": "integer"
+                                },
+                                "rx_tcp_stats": {
+                                    "type": "object",
+                                    "properties": {
+                                        "goodbytes": {
+                                            "type": "integer"
+                                        },
+                                        "lat_avg": {
+                                            "type": "integer"
+                                        },
+                                        "lat_max": {
+                                            "type": "integer"
+                                        },
+                                        "lat_min": {
+                                            "type": "integer"
+                                        },
+                                        "lat_samples": {
+                                            "type": "integer"
+                                        },
+                                        "lat_sum": {
+                                            "type": "integer"
+                                        },
+                                        "stalls": {
+                                            "type": "integer"
+                                        }
+                                    },
+                                    "required": [
+                                        "goodbytes",
+                                        "lat_avg",
+                                        "lat_max",
+                                        "lat_min",
+                                        "lat_samples",
+                                        "lat_sum",
+                                        "stalls"
+                                    ]
+                                },
+                                "satisfaction": {
+                                    "type": "integer"
+                                },
+                                "satisfaction_now": {
+                                    "type": "integer"
+                                },
+                                "satisfaction_real": {
+                                    "type": "integer"
+                                },
+                                "state": {
+                                    "type": "string"
+                                },
+                                "tx_bytes": {
+                                    "type": "integer"
+                                },
+                                "tx_combined_retries": {
+                                    "type": "integer"
+                                },
+                                "tx_data_mpdu_bytes": {
+                                    "type": "integer"
+                                },
+                                "tx_dropped": {
+                                    "type": "integer"
+                                },
+                                "tx_errors": {
+                                    "type": "integer"
+                                },
+                                "tx_packets": {
+                                    "type": "integer"
+                                },
+                                "tx_power": {
+                                    "type": "integer"
+                                },
+                                "tx_retries": {
+                                    "type": "integer"
+                                },
+                                "tx_rts_retries": {
+                                    "type": "integer"
+                                },
+                                "tx_success": {
+                                    "type": "integer"
+                                },
+                                "tx_tcp_stats": {
+                                    "type": "object",
+                                    "properties": {
+                                        "goodbytes": {
+                                            "type": "integer"
+                                        },
+                                        "lat_avg": {
+                                            "type": "integer"
+                                        },
+                                        "lat_max": {
+                                            "type": "integer"
+                                        },
+                                        "lat_min": {
+                                            "type": "integer"
+                                        },
+                                        "lat_samples": {
+                                            "type": "integer"
+                                        },
+                                        "lat_sum": {
+                                            "type": "integer"
+                                        },
+                                        "stalls": {
+                                            "type": "integer"
+                                        }
+                                    },
+                                    "required": [
+                                        "goodbytes",
+                                        "lat_avg",
+                                        "lat_max",
+                                        "lat_min",
+                                        "lat_samples",
+                                        "lat_sum",
+                                        "stalls"
+                                    ]
+                                },
+                                "tx_total": {
+                                    "type": "integer"
+                                },
+                                "up": {
+                                    "type": "boolean"
+                                },
+                                "usage": {
+                                    "type": "string"
+                                },
+                                "wifi_tx_attempts": {
+                                    "type": "integer"
+                                },
+                                "wifi_tx_dropped": {
+                                    "type": "integer"
+                                },
+                                "t": {
+                                    "type": "string"
+                                },
+                                "wlanconf_id": {
+                                    "type": "string"
+                                },
+                                "is_guest": {
+                                    "type": "boolean"
+                                },
+                                "is_wep": {
+                                    "type": "boolean"
+                                },
+                                "ap_mac": {
+                                    "type": "string"
+                                },
+                                "map_id": {
+                                    "type": "null"
+                                },
+                                "site_id": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "anomalies_bar_chart",
+                                "anomalies_bar_chart_now",
+                                "ap_mac",
+                                "avg_client_signal",
+                                "bssid",
+                                "bw",
+                                "ccq",
+                                "channel",
+                                "dns_avg_latency",
+                                "essid",
+                                "icmp_avg_rtt",
+                                "id",
+                                "is_guest",
+                                "is_wep",
+                                "mac_filter_rejections",
+                                "map_id",
+                                "name",
+                                "num_satisfaction_sta",
+                                "num_sta",
+                                "radio",
+                                "radio_name",
+                                "reasons_bar_chart",
+                                "reasons_bar_chart_now",
+                                "rx_bytes",
+                                "rx_crypts",
+                                "rx_dropped",
+                                "rx_errors",
+                                "rx_frags",
+                                "rx_nwids",
+                                "rx_packets",
+                                "rx_tcp_stats",
+                                "satisfaction",
+                                "satisfaction_now",
+                                "satisfaction_real",
+                                "site_id",
+                                "state",
+                                "t",
+                                "tx_bytes",
+                                "tx_combined_retries",
+                                "tx_data_mpdu_bytes",
+                                "tx_dropped",
+                                "tx_errors",
+                                "tx_packets",
+                                "tx_power",
+                                "tx_retries",
+                                "tx_rts_retries",
+                                "tx_success",
+                                "tx_tcp_stats",
+                                "tx_total",
+                                "up",
+                                "usage",
+                                "wifi_tx_attempts",
+                                "wifi_tx_dropped",
+                                "wlanconf_id"
+                            ]
+                        }
+                    },
+                    "ap_downlink_table": {
+                        "type": "array"
+                    },
+                    "vwire_vap_table": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "state": {
+                                    "type": "string"
+                                },
+                                "radio": {
+                                    "type": "string"
+                                },
+                                "radio_name": {
+                                    "type": "string"
+                                },
+                                "bssid": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "bssid",
+                                "radio",
+                                "radio_name",
+                                "state"
+                            ]
+                        }
+                    },
+                    "bytes-d": {
+                        "type": "integer"
+                    },
+                    "tx_bytes-d": {
+                        "type": "integer"
+                    },
+                    "rx_bytes-d": {
+                        "type": "integer"
+                    },
+                    "bytes-r": {
+                        "type": "integer"
+                    },
+                    "downlink_table": {
+                        "type": "array"
+                    },
+                    "network_table": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "_id": {
+                                    "type": "string"
+                                },
+                                "attr_no_delete": {
+                                    "type": "boolean"
+                                },
+                                "attr_hidden_id": {
+                                    "type": "string"
+                                },
+                                "name": {
+                                    "type": "string"
+                                },
+                                "site_id": {
+                                    "type": "string"
+                                },
+                                "vlan_enabled": {
+                                    "type": "boolean"
+                                },
+                                "purpose": {
+                                    "type": "string"
+                                },
+                                "ip_subnet": {
+                                    "type": "string"
+                                },
+                                "ipv6_interface_type": {
+                                    "type": "string"
+                                },
+                                "domain_name": {
+                                    "type": "string"
+                                },
+                                "is_nat": {
+                                    "type": "boolean"
+                                },
+                                "dhcpd_enabled": {
+                                    "type": "boolean"
+                                },
+                                "dhcpd_start": {
+                                    "type": "string"
+                                },
+                                "dhcpd_stop": {
+                                    "type": "string"
+                                },
+                                "dhcpdv6_enabled": {
+                                    "type": "boolean"
+                                },
+                                "ipv6_ra_enabled": {
+                                    "type": "boolean"
+                                },
+                                "lte_lan_enabled": {
+                                    "type": "boolean"
+                                },
+                                "networkgroup": {
+                                    "type": "string"
+                                },
+                                "dhcpd_leasetime": {
+                                    "type": "integer"
+                                },
+                                "dhcpd_dns_enabled": {
+                                    "type": "boolean"
+                                },
+                                "dhcpd_gateway_enabled": {
+                                    "type": "boolean"
+                                },
+                                "dhcpd_time_offset_enabled": {
+                                    "type": "boolean"
+                                },
+                                "ipv6_pd_start": {
+                                    "type": "string"
+                                },
+                                "ipv6_pd_stop": {
+                                    "type": "string"
+                                },
+                                "gateway_type": {
+                                    "type": "string"
+                                },
+                                "enabled": {
+                                    "type": "boolean"
+                                },
+                                "dhcp_relay_enabled": {
+                                    "type": "boolean"
+                                },
+                                "nat_outbound_ip_addresses": {
+                                    "type": "array"
+                                },
+                                "dpi_enabled": {
+                                    "type": "boolean"
+                                },
+                                "dpigroup_id": {
+                                    "type": "string"
+                                },
+                                "dhcpd_dns_1": {
+                                    "type": "string"
+                                },
+                                "dhcpd_dns_2": {
+                                    "type": "string"
+                                },
+                                "is_guest": {
+                                    "type": "boolean"
+                                },
+                                "ip": {
+                                    "type": [
+                                        "null",
+                                        "string"
+                                    ]
+                                },
+                                "mac": {
+                                    "type": "string"
+                                },
+                                "up": {
+                                    "type": [
+                                        "boolean",
+                                        "string"
+                                    ]
+                                },
+                                "active_dhcp_lease_count": {
+                                    "type": "integer"
+                                },
+                                "gateway_interface_name": {
+                                    "type": "string"
+                                },
+                                "dpistats_table": {
+                                    "type": "object",
+                                    "properties": {
+                                        "last_updated": {
+                                            "type": "integer"
+                                        },
+                                        "by_cat": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "cat": {
+                                                        "type": "integer"
+                                                    },
+                                                    "apps": {
+                                                        "type": "array",
+                                                        "items": {
+                                                            "type": "integer"
+                                                        }
+                                                    },
+                                                    "rx_bytes": {
+                                                        "type": "integer"
+                                                    },
+                                                    "tx_bytes": {
+                                                        "type": "integer"
+                                                    },
+                                                    "rx_packets": {
+                                                        "type": "integer"
+                                                    },
+                                                    "tx_packets": {
+                                                        "type": "integer"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "apps",
+                                                    "cat",
+                                                    "rx_bytes",
+                                                    "rx_packets",
+                                                    "tx_bytes",
+                                                    "tx_packets"
+                                                ]
+                                            }
+                                        },
+                                        "by_app": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "app": {
+                                                        "type": "integer"
+                                                    },
+                                                    "cat": {
+                                                        "type": "integer"
+                                                    },
+                                                    "clients": {
+                                                        "type": "array",
+                                                        "items": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                                "mac": {
+                                                                    "type": "string"
+                                                                },
+                                                                "rx_bytes": {
+                                                                    "type": "integer"
+                                                                },
+                                                                "tx_bytes": {
+                                                                    "type": "integer"
+                                                                },
+                                                                "rx_packets": {
+                                                                    "type": "integer"
+                                                                },
+                                                                "tx_packets": {
+                                                                    "type": "integer"
+                                                                }
+                                                            },
+                                                            "required": [
+                                                                "mac",
+                                                                "rx_bytes",
+                                                                "rx_packets",
+                                                                "tx_bytes",
+                                                                "tx_packets"
+                                                            ]
+                                                        }
+                                                    },
+                                                    "known_clients": {
+                                                        "type": "integer"
+                                                    },
+                                                    "rx_bytes": {
+                                                        "type": "integer"
+                                                    },
+                                                    "tx_bytes": {
+                                                        "type": "integer"
+                                                    },
+                                                    "rx_packets": {
+                                                        "type": "integer"
+                                                    },
+                                                    "tx_packets": {
+                                                        "type": "integer"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "app",
+                                                    "cat",
+                                                    "clients",
+                                                    "known_clients",
+                                                    "rx_bytes",
+                                                    "rx_packets",
+                                                    "tx_bytes",
+                                                    "tx_packets"
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    "required": [
+                                        "by_app",
+                                        "by_cat",
+                                        "last_updated"
+                                    ]
+                                },
+                                "num_sta": {
+                                    "type": "integer"
+                                },
+                                "rx_bytes": {
+                                    "type": "integer"
+                                },
+                                "rx_packets": {
+                                    "type": "integer"
+                                },
+                                "tx_bytes": {
+                                    "type": "integer"
+                                },
+                                "tx_packets": {
+                                    "type": "integer"
+                                },
+                                "ipsec_interface": {
+                                    "type": "string"
+                                },
+                                "vpn_type": {
+                                    "type": "string"
+                                },
+                                "route_distance": {
+                                    "type": "integer"
+                                },
+                                "ipsec_profile": {
+                                    "type": "string"
+                                },
+                                "remote_vpn_subnets": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                },
+                                "ipsec_key_exchange": {
+                                    "type": "string"
+                                },
+                                "ipsec_encryption": {
+                                    "type": "string"
+                                },
+                                "ipsec_hash": {
+                                    "type": "string"
+                                },
+                                "ipsec_dh_group": {
+                                    "type": "integer"
+                                },
+                                "ipsec_ike_dh_group": {
+                                    "type": "integer"
+                                },
+                                "ipsec_esp_dh_group": {
+                                    "type": "integer"
+                                },
+                                "ipsec_pfs": {
+                                    "type": "boolean"
+                                },
+                                "ipsec_dynamic_routing": {
+                                    "type": "boolean"
+                                },
+                                "x_ipsec_pre_shared_key": {
+                                    "type": "string"
+                                },
+                                "ipsec_local_ip": {
+                                    "type": "string"
+                                },
+                                "ipsec_peer_ip": {
+                                    "type": "string"
+                                },
+                                "ifname": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "_id",
+                                "enabled",
+                                "ip",
+                                "is_guest",
+                                "is_nat",
+                                "name",
+                                "purpose",
+                                "site_id",
+                                "up"
+                            ]
+                        }
+                    },
+                    "connect_request_ip": {
+                        "type": "string"
+                    },
+                    "connect_request_port": {
+                        "type": "string"
+                    },
+                    "prev_non_busy_state": {
+                        "type": "integer"
+                    },
+                    "next_interval": {
+                        "type": "integer"
+                    },
+                    "next_heartbeat_at": {
+                        "type": "integer"
+                    },
+                    "considered_lost_at": {
+                        "type": "integer"
+                    },
+                    "stat": {
+                        "type": "object",
+                        "properties": {
+                            "ap": {
+                                "type": "object",
+                                "properties": {
+                                    "site_id": {
+                                        "type": "string"
+                                    },
+                                    "o": {
+                                        "type": "string"
+                                    },
+                                    "oid": {
+                                        "type": "string"
+                                    },
+                                    "ap": {
+                                        "type": "string"
+                                    },
+                                    "time": {
+                                        "type": "integer"
+                                    },
+                                    "datetime": {
+                                        "type": "string"
+                                    },
+                                    "user-rai0-rx_packets": {
+                                        "type": "number"
+                                    },
+                                    "user-ra0-rx_packets": {
+                                        "type": "number"
+                                    },
+                                    "user-rx_packets": {
+                                        "type": "number"
+                                    },
+                                    "guest-rx_packets": {
+                                        "type": "number"
+                                    },
+                                    "ra0-rx_packets": {
+                                        "type": "number"
+                                    },
+                                    "rai0-rx_packets": {
+                                        "type": "number"
+                                    },
+                                    "rx_packets": {
+                                        "type": "number"
+                                    },
+                                    "user-rai0-rx_bytes": {
+                                        "type": "number"
+                                    },
+                                    "user-ra0-rx_bytes": {
+                                        "type": "number"
+                                    },
+                                    "user-rx_bytes": {
+                                        "type": "number"
+                                    },
+                                    "guest-rx_bytes": {
+                                        "type": "number"
+                                    },
+                                    "ra0-rx_bytes": {
+                                        "type": "number"
+                                    },
+                                    "rai0-rx_bytes": {
+                                        "type": "number"
+                                    },
+                                    "rx_bytes": {
+                                        "type": "number"
+                                    },
+                                    "user-rai0-rx_errors": {
+                                        "type": "number"
+                                    },
+                                    "user-ra0-rx_errors": {
+                                        "type": "number"
+                                    },
+                                    "user-rx_errors": {
+                                        "type": "number"
+                                    },
+                                    "guest-rx_errors": {
+                                        "type": "number"
+                                    },
+                                    "ra0-rx_errors": {
+                                        "type": "number"
+                                    },
+                                    "rai0-rx_errors": {
+                                        "type": "number"
+                                    },
+                                    "rx_errors": {
+                                        "type": "number"
+                                    },
+                                    "user-rai0-rx_dropped": {
+                                        "type": "number"
+                                    },
+                                    "user-ra0-rx_dropped": {
+                                        "type": "number"
+                                    },
+                                    "user-rx_dropped": {
+                                        "type": "number"
+                                    },
+                                    "guest-rx_dropped": {
+                                        "type": "number"
+                                    },
+                                    "ra0-rx_dropped": {
+                                        "type": "number"
+                                    },
+                                    "rai0-rx_dropped": {
+                                        "type": "number"
+                                    },
+                                    "rx_dropped": {
+                                        "type": "number"
+                                    },
+                                    "user-rai0-rx_crypts": {
+                                        "type": "number"
+                                    },
+                                    "user-ra0-rx_crypts": {
+                                        "type": "number"
+                                    },
+                                    "user-rx_crypts": {
+                                        "type": "number"
+                                    },
+                                    "guest-rx_crypts": {
+                                        "type": "number"
+                                    },
+                                    "ra0-rx_crypts": {
+                                        "type": "number"
+                                    },
+                                    "rai0-rx_crypts": {
+                                        "type": "number"
+                                    },
+                                    "rx_crypts": {
+                                        "type": "number"
+                                    },
+                                    "user-rai0-rx_frags": {
+                                        "type": "number"
+                                    },
+                                    "user-ra0-rx_frags": {
+                                        "type": "number"
+                                    },
+                                    "user-rx_frags": {
+                                        "type": "number"
+                                    },
+                                    "guest-rx_frags": {
+                                        "type": "number"
+                                    },
+                                    "ra0-rx_frags": {
+                                        "type": "number"
+                                    },
+                                    "rai0-rx_frags": {
+                                        "type": "number"
+                                    },
+                                    "rx_frags": {
+                                        "type": "number"
+                                    },
+                                    "user-rai0-tx_packets": {
+                                        "type": "number"
+                                    },
+                                    "user-ra0-tx_packets": {
+                                        "type": "number"
+                                    },
+                                    "user-tx_packets": {
+                                        "type": "number"
+                                    },
+                                    "guest-tx_packets": {
+                                        "type": "number"
+                                    },
+                                    "ra0-tx_packets": {
+                                        "type": "number"
+                                    },
+                                    "rai0-tx_packets": {
+                                        "type": "number"
+                                    },
+                                    "tx_packets": {
+                                        "type": "number"
+                                    },
+                                    "user-rai0-tx_bytes": {
+                                        "type": "number"
+                                    },
+                                    "user-ra0-tx_bytes": {
+                                        "type": "number"
+                                    },
+                                    "user-tx_bytes": {
+                                        "type": "number"
+                                    },
+                                    "guest-tx_bytes": {
+                                        "type": "number"
+                                    },
+                                    "ra0-tx_bytes": {
+                                        "type": "number"
+                                    },
+                                    "rai0-tx_bytes": {
+                                        "type": "number"
+                                    },
+                                    "tx_bytes": {
+                                        "type": "number"
+                                    },
+                                    "user-rai0-tx_errors": {
+                                        "type": "number"
+                                    },
+                                    "user-ra0-tx_errors": {
+                                        "type": "number"
+                                    },
+                                    "user-tx_errors": {
+                                        "type": "number"
+                                    },
+                                    "guest-tx_errors": {
+                                        "type": "number"
+                                    },
+                                    "ra0-tx_errors": {
+                                        "type": "number"
+                                    },
+                                    "rai0-tx_errors": {
+                                        "type": "number"
+                                    },
+                                    "tx_errors": {
+                                        "type": "number"
+                                    },
+                                    "user-rai0-tx_dropped": {
+                                        "type": "number"
+                                    },
+                                    "user-ra0-tx_dropped": {
+                                        "type": "number"
+                                    },
+                                    "user-tx_dropped": {
+                                        "type": "number"
+                                    },
+                                    "guest-tx_dropped": {
+                                        "type": "number"
+                                    },
+                                    "ra0-tx_dropped": {
+                                        "type": "number"
+                                    },
+                                    "rai0-tx_dropped": {
+                                        "type": "number"
+                                    },
+                                    "tx_dropped": {
+                                        "type": "number"
+                                    },
+                                    "user-rai0-tx_retries": {
+                                        "type": "number"
+                                    },
+                                    "user-ra0-tx_retries": {
+                                        "type": "number"
+                                    },
+                                    "user-tx_retries": {
+                                        "type": "number"
+                                    },
+                                    "guest-tx_retries": {
+                                        "type": "number"
+                                    },
+                                    "ra0-tx_retries": {
+                                        "type": "number"
+                                    },
+                                    "rai0-tx_retries": {
+                                        "type": "number"
+                                    },
+                                    "tx_retries": {
+                                        "type": "number"
+                                    },
+                                    "user-rai0-mac_filter_rejections": {
+                                        "type": "number"
+                                    },
+                                    "user-ra0-mac_filter_rejections": {
+                                        "type": "number"
+                                    },
+                                    "user-mac_filter_rejections": {
+                                        "type": "number"
+                                    },
+                                    "guest-mac_filter_rejections": {
+                                        "type": "number"
+                                    },
+                                    "ra0-mac_filter_rejections": {
+                                        "type": "number"
+                                    },
+                                    "rai0-mac_filter_rejections": {
+                                        "type": "number"
+                                    },
+                                    "mac_filter_rejections": {
+                                        "type": "number"
+                                    },
+                                    "user-rai0-wifi_tx_attempts": {
+                                        "type": "number"
+                                    },
+                                    "user-ra0-wifi_tx_attempts": {
+                                        "type": "number"
+                                    },
+                                    "user-wifi_tx_attempts": {
+                                        "type": "number"
+                                    },
+                                    "guest-wifi_tx_attempts": {
+                                        "type": "number"
+                                    },
+                                    "ra0-wifi_tx_attempts": {
+                                        "type": "number"
+                                    },
+                                    "rai0-wifi_tx_attempts": {
+                                        "type": "number"
+                                    },
+                                    "wifi_tx_attempts": {
+                                        "type": "number"
+                                    },
+                                    "user-rai0-wifi_tx_dropped": {
+                                        "type": "number"
+                                    },
+                                    "user-ra0-wifi_tx_dropped": {
+                                        "type": "number"
+                                    },
+                                    "user-wifi_tx_dropped": {
+                                        "type": "number"
+                                    },
+                                    "guest-wifi_tx_dropped": {
+                                        "type": "number"
+                                    },
+                                    "ra0-wifi_tx_dropped": {
+                                        "type": "number"
+                                    },
+                                    "rai0-wifi_tx_dropped": {
+                                        "type": "number"
+                                    },
+                                    "wifi_tx_dropped": {
+                                        "type": "number"
+                                    },
+                                    "bytes": {
+                                        "type": "number"
+                                    },
+                                    "duration": {
+                                        "type": "number"
+                                    }
+                                },
+                                "required": [
+                                    "ap",
+                                    "bytes",
+                                    "datetime",
+                                    "duration",
+                                    "guest-mac_filter_rejections",
+                                    "guest-rx_bytes",
+                                    "guest-rx_crypts",
+                                    "guest-rx_dropped",
+                                    "guest-rx_errors",
+                                    "guest-rx_frags",
+                                    "guest-rx_packets",
+                                    "guest-tx_bytes",
+                                    "guest-tx_dropped",
+                                    "guest-tx_errors",
+                                    "guest-tx_packets",
+                                    "guest-tx_retries",
+                                    "guest-wifi_tx_attempts",
+                                    "guest-wifi_tx_dropped",
+                                    "mac_filter_rejections",
+                                    "o",
+                                    "oid",
+                                    "ra0-mac_filter_rejections",
+                                    "ra0-rx_bytes",
+                                    "ra0-rx_crypts",
+                                    "ra0-rx_dropped",
+                                    "ra0-rx_errors",
+                                    "ra0-rx_frags",
+                                    "ra0-rx_packets",
+                                    "ra0-tx_bytes",
+                                    "ra0-tx_dropped",
+                                    "ra0-tx_errors",
+                                    "ra0-tx_packets",
+                                    "ra0-tx_retries",
+                                    "ra0-wifi_tx_attempts",
+                                    "ra0-wifi_tx_dropped",
+                                    "rai0-mac_filter_rejections",
+                                    "rai0-rx_bytes",
+                                    "rai0-rx_crypts",
+                                    "rai0-rx_dropped",
+                                    "rai0-rx_errors",
+                                    "rai0-rx_frags",
+                                    "rai0-rx_packets",
+                                    "rai0-tx_bytes",
+                                    "rai0-tx_dropped",
+                                    "rai0-tx_errors",
+                                    "rai0-tx_packets",
+                                    "rai0-tx_retries",
+                                    "rai0-wifi_tx_attempts",
+                                    "rai0-wifi_tx_dropped",
+                                    "rx_bytes",
+                                    "rx_crypts",
+                                    "rx_dropped",
+                                    "rx_errors",
+                                    "rx_frags",
+                                    "rx_packets",
+                                    "site_id",
+                                    "time",
+                                    "tx_bytes",
+                                    "tx_dropped",
+                                    "tx_errors",
+                                    "tx_packets",
+                                    "tx_retries",
+                                    "user-mac_filter_rejections",
+                                    "user-ra0-mac_filter_rejections",
+                                    "user-ra0-rx_bytes",
+                                    "user-ra0-rx_crypts",
+                                    "user-ra0-rx_dropped",
+                                    "user-ra0-rx_errors",
+                                    "user-ra0-rx_frags",
+                                    "user-ra0-rx_packets",
+                                    "user-ra0-tx_bytes",
+                                    "user-ra0-tx_dropped",
+                                    "user-ra0-tx_errors",
+                                    "user-ra0-tx_packets",
+                                    "user-ra0-tx_retries",
+                                    "user-ra0-wifi_tx_attempts",
+                                    "user-ra0-wifi_tx_dropped",
+                                    "user-rai0-mac_filter_rejections",
+                                    "user-rai0-rx_bytes",
+                                    "user-rai0-rx_crypts",
+                                    "user-rai0-rx_dropped",
+                                    "user-rai0-rx_errors",
+                                    "user-rai0-rx_frags",
+                                    "user-rai0-rx_packets",
+                                    "user-rai0-tx_bytes",
+                                    "user-rai0-tx_dropped",
+                                    "user-rai0-tx_errors",
+                                    "user-rai0-tx_packets",
+                                    "user-rai0-tx_retries",
+                                    "user-rai0-wifi_tx_attempts",
+                                    "user-rai0-wifi_tx_dropped",
+                                    "user-rx_bytes",
+                                    "user-rx_crypts",
+                                    "user-rx_dropped",
+                                    "user-rx_errors",
+                                    "user-rx_frags",
+                                    "user-rx_packets",
+                                    "user-tx_bytes",
+                                    "user-tx_dropped",
+                                    "user-tx_errors",
+                                    "user-tx_packets",
+                                    "user-tx_retries",
+                                    "user-wifi_tx_attempts",
+                                    "user-wifi_tx_dropped",
+                                    "wifi_tx_attempts",
+                                    "wifi_tx_dropped"
+                                ]
+                            },
+                            "sw": {
+                                "type": "object",
+                                "properties": {
+                                    "site_id": {
+                                        "type": "string"
+                                    },
+                                    "o": {
+                                        "type": "string"
+                                    },
+                                    "oid": {
+                                        "type": "string"
+                                    },
+                                    "sw": {
+                                        "type": "string"
+                                    },
+                                    "time": {
+                                        "type": "integer"
+                                    },
+                                    "datetime": {
+                                        "type": "string"
+                                    },
+                                    "rx_packets": {
+                                        "type": "number"
+                                    },
+                                    "rx_bytes": {
+                                        "type": "number"
+                                    },
+                                    "rx_errors": {
+                                        "type": "number"
+                                    },
+                                    "rx_dropped": {
+                                        "type": "number"
+                                    },
+                                    "rx_crypts": {
+                                        "type": "number"
+                                    },
+                                    "rx_frags": {
+                                        "type": "number"
+                                    },
+                                    "tx_packets": {
+                                        "type": "number"
+                                    },
+                                    "tx_bytes": {
+                                        "type": "number"
+                                    },
+                                    "tx_errors": {
+                                        "type": "number"
+                                    },
+                                    "tx_dropped": {
+                                        "type": "number"
+                                    },
+                                    "tx_retries": {
+                                        "type": "number"
+                                    },
+                                    "rx_multicast": {
+                                        "type": "number"
+                                    },
+                                    "rx_broadcast": {
+                                        "type": "number"
+                                    },
+                                    "tx_multicast": {
+                                        "type": "number"
+                                    },
+                                    "tx_broadcast": {
+                                        "type": "number"
+                                    },
+                                    "bytes": {
+                                        "type": "number"
+                                    },
+                                    "duration": {
+                                        "type": "number"
+                                    },
+                                    "port_3-tx_packets": {
+                                        "type": "number"
+                                    },
+                                    "port_3-tx_bytes": {
+                                        "type": "number"
+                                    },
+                                    "port_3-tx_multicast": {
+                                        "type": "number"
+                                    },
+                                    "port_3-tx_broadcast": {
+                                        "type": "number"
+                                    },
+                                    "port_4-rx_packets": {
+                                        "type": "number"
+                                    },
+                                    "port_4-rx_bytes": {
+                                        "type": "number"
+                                    },
+                                    "port_4-tx_packets": {
+                                        "type": "number"
+                                    },
+                                    "port_4-tx_bytes": {
+                                        "type": "number"
+                                    },
+                                    "port_4-tx_multicast": {
+                                        "type": "number"
+                                    },
+                                    "port_4-tx_broadcast": {
+                                        "type": "number"
+                                    },
+                                    "port_3-rx_packets": {
+                                        "type": "number"
+                                    },
+                                    "port_3-rx_bytes": {
+                                        "type": "number"
+                                    },
+                                    "port_3-rx_multicast": {
+                                        "type": "number"
+                                    },
+                                    "port_4-rx_multicast": {
+                                        "type": "number"
+                                    },
+                                    "port_4-rx_broadcast": {
+                                        "type": "number"
+                                    },
+                                    "port_3-rx_broadcast": {
+                                        "type": "number"
+                                    },
+                                    "port_2-rx_packets": {
+                                        "type": "number"
+                                    },
+                                    "port_2-rx_bytes": {
+                                        "type": "number"
+                                    },
+                                    "port_2-tx_packets": {
+                                        "type": "number"
+                                    },
+                                    "port_2-tx_bytes": {
+                                        "type": "number"
+                                    },
+                                    "port_2-rx_multicast": {
+                                        "type": "number"
+                                    },
+                                    "port_2-rx_broadcast": {
+                                        "type": "number"
+                                    },
+                                    "port_2-tx_multicast": {
+                                        "type": "number"
+                                    },
+                                    "port_2-tx_broadcast": {
+                                        "type": "number"
+                                    }
+                                },
+                                "required": [
+                                    "bytes",
+                                    "datetime",
+                                    "duration",
+                                    "o",
+                                    "oid",
+                                    "port_2-rx_broadcast",
+                                    "port_2-rx_bytes",
+                                    "port_2-rx_multicast",
+                                    "port_2-rx_packets",
+                                    "port_2-tx_broadcast",
+                                    "port_2-tx_bytes",
+                                    "port_2-tx_multicast",
+                                    "port_2-tx_packets",
+                                    "port_3-rx_broadcast",
+                                    "port_3-rx_bytes",
+                                    "port_3-rx_multicast",
+                                    "port_3-rx_packets",
+                                    "port_3-tx_broadcast",
+                                    "port_3-tx_bytes",
+                                    "port_3-tx_multicast",
+                                    "port_3-tx_packets",
+                                    "port_4-rx_broadcast",
+                                    "port_4-rx_bytes",
+                                    "port_4-rx_multicast",
+                                    "port_4-rx_packets",
+                                    "port_4-tx_broadcast",
+                                    "port_4-tx_bytes",
+                                    "port_4-tx_multicast",
+                                    "port_4-tx_packets",
+                                    "rx_broadcast",
+                                    "rx_bytes",
+                                    "rx_crypts",
+                                    "rx_dropped",
+                                    "rx_errors",
+                                    "rx_frags",
+                                    "rx_multicast",
+                                    "rx_packets",
+                                    "site_id",
+                                    "sw",
+                                    "time",
+                                    "tx_broadcast",
+                                    "tx_bytes",
+                                    "tx_dropped",
+                                    "tx_errors",
+                                    "tx_multicast",
+                                    "tx_packets",
+                                    "tx_retries"
+                                ]
+                            },
+                            "gw": {
+                                "type": "object",
+                                "properties": {
+                                    "site_id": {
+                                        "type": "string"
+                                    },
+                                    "o": {
+                                        "type": "string"
+                                    },
+                                    "oid": {
+                                        "type": "string"
+                                    },
+                                    "gw": {
+                                        "type": "string"
+                                    },
+                                    "time": {
+                                        "type": "integer"
+                                    },
+                                    "datetime": {
+                                        "type": "string"
+                                    },
+                                    "duration": {
+                                        "type": "number"
+                                    }
+                                },
+                                "required": [
+                                    "datetime",
+                                    "duration",
+                                    "gw",
+                                    "o",
+                                    "oid",
+                                    "site_id",
+                                    "time"
+                                ]
+                            }
+                        },
+                        "required": [
+                            "ap",
+                            "gw",
+                            "sw"
+                        ]
+                    },
+                    "tx_bytes": {
+                        "type": "integer"
+                    },
+                    "rx_bytes": {
+                        "type": "integer"
+                    },
+                    "bytes": {
+                        "type": "integer"
+                    },
+                    "vwireEnabled": {
+                        "type": "boolean"
+                    },
+                    "uplink_table": {
+                        "type": "array"
+                    },
+                    "num_sta": {
+                        "type": "integer"
+                    },
+                    "wlan-num_sta": {
+                        "type": "integer"
+                    },
+                    "lan-num_sta": {
+                        "type": "integer"
+                    },
+                    "user-wlan-num_sta": {
+                        "type": "integer"
+                    },
+                    "user-lan-num_sta": {
+                        "type": "integer"
+                    },
+                    "user-num_sta": {
+                        "type": "integer"
+                    },
+                    "guest-wlan-num_sta": {
+                        "type": "integer"
+                    },
+                    "guest-lan-num_sta": {
+                        "type": "integer"
+                    },
+                    "guest-num_sta": {
+                        "type": "integer"
+                    },
+                    "num_desktop": {
+                        "type": "integer"
+                    },
+                    "num_mobile": {
+                        "type": "integer"
+                    },
+                    "num_handheld": {
+                        "type": "integer"
+                    },
+                    "x_has_ssh_hostkey": {
+                        "type": "boolean"
+                    }
+                },
+                "required": []
+            }
+        }
+    },
+    "required": []
+}

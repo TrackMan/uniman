@@ -1,0 +1,48 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "properties": {
+        "meta": {
+            "type": "object",
+            "properties": {
+                "rc": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "rc"
+            ]
+        },
+        "data": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "_id": {
+                        "type": "string"
+                    },
+                    "site_id": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "attr_hidden_id": {
+                        "type": "string"
+                    },
+                    "attr_no_delete": {
+                        "type": "boolean"
+                    },
+                    "qos_rate_max_up": {
+                        "type": "integer"
+                    },
+                    "qos_rate_max_down": {
+                        "type": "integer"
+                    }
+                },
+                "required": []
+            }
+        }
+    },
+    "required": []
+}

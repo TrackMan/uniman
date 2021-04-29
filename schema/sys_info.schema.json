@@ -1,0 +1,144 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "properties": {
+        "meta": {
+            "type": "object",
+            "properties": {
+                "rc": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "rc"
+            ]
+        },
+        "data": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "timezone": {
+                        "type": "string"
+                    },
+                    "autobackup": {
+                        "type": "boolean"
+                    },
+                    "build": {
+                        "type": "string"
+                    },
+                    "version": {
+                        "type": "string"
+                    },
+                    "previous_version": {
+                        "type": "string"
+                    },
+                    "debug_mgmt": {
+                        "type": "string"
+                    },
+                    "debug_system": {
+                        "type": "string"
+                    },
+                    "debug_device": {
+                        "type": "string"
+                    },
+                    "debug_sdn": {
+                        "type": "string"
+                    },
+                    "data_retention_days": {
+                        "type": "integer"
+                    },
+                    "data_retention_time_in_hours_for_5minutes_scale": {
+                        "type": "integer"
+                    },
+                    "data_retention_time_in_hours_for_hourly_scale": {
+                        "type": "integer"
+                    },
+                    "data_retention_time_in_hours_for_daily_scale": {
+                        "type": "integer"
+                    },
+                    "data_retention_time_in_hours_for_monthly_scale": {
+                        "type": "integer"
+                    },
+                    "data_retention_time_in_hours_for_others": {
+                        "type": "integer"
+                    },
+                    "update_available": {
+                        "type": "boolean"
+                    },
+                    "update_downloaded": {
+                        "type": "boolean"
+                    },
+                    "live_chat": {
+                        "type": "string"
+                    },
+                    "store_enabled": {
+                        "type": "string"
+                    },
+                    "hostname": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "ip_addrs": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "inform_port": {
+                        "type": "integer"
+                    },
+                    "https_port": {
+                        "type": "integer"
+                    },
+                    "override_inform_host": {
+                        "type": "boolean"
+                    },
+                    "image_maps_use_google_engine": {
+                        "type": "boolean"
+                    },
+                    "radius_disconnect_running": {
+                        "type": "boolean"
+                    },
+                    "facebook_wifi_registered": {
+                        "type": "boolean"
+                    },
+                    "sso_app_id": {
+                        "type": "string"
+                    },
+                    "sso_app_sec": {
+                        "type": "string"
+                    },
+                    "uptime": {
+                        "type": "integer"
+                    },
+                    "anonymous_controller_id": {
+                        "type": "string"
+                    },
+                    "ubnt_device_type": {
+                        "type": "string"
+                    },
+                    "udm_version": {
+                        "type": "string"
+                    },
+                    "unsupported_device_count": {
+                        "type": "integer"
+                    },
+                    "unsupported_device_list": {
+                        "type": "array"
+                    },
+                    "unifi_go_enabled": {
+                        "type": "boolean"
+                    },
+                    "default_site_device_auth_password_alert": {
+                        "type": "boolean"
+                    }
+                },
+                "required": []
+            }
+        }
+    },
+    "required": []
+}

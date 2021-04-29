@@ -1,0 +1,222 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "properties": {
+        "meta": {
+            "type": "object",
+            "properties": {
+                "rc": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "rc"
+            ]
+        },
+        "data": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "_id": {
+                        "type": "string"
+                    },
+                    "attr_no_delete": {
+                        "type": "boolean"
+                    },
+                    "attr_hidden_id": {
+                        "type": "string"
+                    },
+                    "wan_networkgroup": {
+                        "type": "string"
+                    },
+                    "site_id": {
+                        "type": "string"
+                    },
+                    "purpose": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "wan_type": {
+                        "type": "string"
+                    },
+                    "wan_provider_capabilities": {
+                        "type": "object",
+                        "properties": {
+                            "upload_kilobits_per_second": {
+                                "type": "integer"
+                            },
+                            "download_kilobits_per_second": {
+                                "type": "integer"
+                            }
+                        },
+                        "required": [
+                            "download_kilobits_per_second",
+                            "upload_kilobits_per_second"
+                        ]
+                    },
+                    "report_wan_event": {
+                        "type": "boolean"
+                    },
+                    "wan_ip_aliases": {
+                        "type": "array"
+                    },
+                    "wan_type_v6": {
+                        "type": "string"
+                    },
+                    "wan_load_balance_type": {
+                        "type": "string"
+                    },
+                    "wan_load_balance_weight": {
+                        "type": "integer"
+                    },
+                    "wan_egress_qos": {
+                        "type": "string"
+                    },
+                    "wan_dhcp_options": {
+                        "type": "array"
+                    },
+                    "wan_dns1": {
+                        "type": "string"
+                    },
+                    "vlan_enabled": {
+                        "type": "boolean"
+                    },
+                    "ip_subnet": {
+                        "type": "string"
+                    },
+                    "ipv6_interface_type": {
+                        "type": "string"
+                    },
+                    "domain_name": {
+                        "type": "string"
+                    },
+                    "is_nat": {
+                        "type": "boolean"
+                    },
+                    "dhcpd_enabled": {
+                        "type": "boolean"
+                    },
+                    "dhcpd_start": {
+                        "type": "string"
+                    },
+                    "dhcpd_stop": {
+                        "type": "string"
+                    },
+                    "dhcpdv6_enabled": {
+                        "type": "boolean"
+                    },
+                    "ipv6_ra_enabled": {
+                        "type": "boolean"
+                    },
+                    "lte_lan_enabled": {
+                        "type": "boolean"
+                    },
+                    "networkgroup": {
+                        "type": "string"
+                    },
+                    "dhcpd_leasetime": {
+                        "type": "integer"
+                    },
+                    "dhcpd_dns_enabled": {
+                        "type": "boolean"
+                    },
+                    "dhcpd_gateway_enabled": {
+                        "type": "boolean"
+                    },
+                    "dhcpd_time_offset_enabled": {
+                        "type": "boolean"
+                    },
+                    "ipv6_pd_start": {
+                        "type": "string"
+                    },
+                    "ipv6_pd_stop": {
+                        "type": "string"
+                    },
+                    "gateway_type": {
+                        "type": "string"
+                    },
+                    "enabled": {
+                        "type": "boolean"
+                    },
+                    "dhcp_relay_enabled": {
+                        "type": "boolean"
+                    },
+                    "nat_outbound_ip_addresses": {
+                        "type": "array"
+                    },
+                    "dpi_enabled": {
+                        "type": "boolean"
+                    },
+                    "dpigroup_id": {
+                        "type": "string"
+                    },
+                    "dhcpd_dns_1": {
+                        "type": "string"
+                    },
+                    "dhcpd_dns_2": {
+                        "type": "string"
+                    },
+                    "ipsec_interface": {
+                        "type": "string"
+                    },
+                    "vpn_type": {
+                        "type": "string"
+                    },
+                    "route_distance": {
+                        "type": "integer"
+                    },
+                    "ipsec_profile": {
+                        "type": "string"
+                    },
+                    "remote_vpn_subnets": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "ipsec_key_exchange": {
+                        "type": "string"
+                    },
+                    "ipsec_encryption": {
+                        "type": "string"
+                    },
+                    "ipsec_hash": {
+                        "type": "string"
+                    },
+                    "ipsec_dh_group": {
+                        "type": "integer"
+                    },
+                    "ipsec_ike_dh_group": {
+                        "type": "integer"
+                    },
+                    "ipsec_esp_dh_group": {
+                        "type": "integer"
+                    },
+                    "ipsec_pfs": {
+                        "type": "boolean"
+                    },
+                    "ipsec_dynamic_routing": {
+                        "type": "boolean"
+                    },
+                    "x_ipsec_pre_shared_key": {
+                        "type": "string"
+                    },
+                    "ipsec_local_ip": {
+                        "type": "string"
+                    },
+                    "ipsec_peer_ip": {
+                        "type": "string"
+                    },
+                    "ifname": {
+                        "type": "string"
+                    }
+                },
+                "required": []
+            }
+        }
+    },
+    "required": []
+}

@@ -1,0 +1,108 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "properties": {
+        "meta": {
+            "type": "object",
+            "properties": {
+                "rc": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "rc"
+            ]
+        },
+        "data": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "_id": {
+                        "type": "string"
+                    },
+                    "ruleset": {
+                        "type": "string"
+                    },
+                    "rule_index": {
+                        "type": "integer"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "enabled": {
+                        "type": "boolean"
+                    },
+                    "action": {
+                        "type": "string"
+                    },
+                    "protocol_match_excepted": {
+                        "type": "boolean"
+                    },
+                    "logging": {
+                        "type": "boolean"
+                    },
+                    "state_new": {
+                        "type": "boolean"
+                    },
+                    "state_established": {
+                        "type": "boolean"
+                    },
+                    "state_invalid": {
+                        "type": "boolean"
+                    },
+                    "state_related": {
+                        "type": "boolean"
+                    },
+                    "ipsec": {
+                        "type": "string"
+                    },
+                    "src_firewallgroup_ids": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "src_mac_address": {
+                        "type": "string"
+                    },
+                    "dst_firewallgroup_ids": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "dst_address": {
+                        "type": "string"
+                    },
+                    "src_address": {
+                        "type": "string"
+                    },
+                    "protocol": {
+                        "type": "string"
+                    },
+                    "icmp_typename": {
+                        "type": "string"
+                    },
+                    "src_networkconf_id": {
+                        "type": "string"
+                    },
+                    "src_networkconf_type": {
+                        "type": "string"
+                    },
+                    "dst_networkconf_id": {
+                        "type": "string"
+                    },
+                    "dst_networkconf_type": {
+                        "type": "string"
+                    },
+                    "site_id": {
+                        "type": "string"
+                    }
+                },
+                "required": []
+            }
+        }
+    },
+    "required": []
+}
