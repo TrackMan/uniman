@@ -3,11 +3,8 @@ from typing import TypeVar
 from requests import Session, Request, Response
 from statham.schema.constants import NotPassed
 
-import model.firewall_group
-import model.firewall_rule
-import model.login
-import model.sys_info
-from client.endpoints import Endpoints, Endpoint
+import uniman.model.login
+from uniman.endpoints import Endpoints, Endpoint
 
 
 class GenericUniFiClient:
@@ -24,7 +21,7 @@ class GenericUniFiClient:
         self.site = site
         self.csrf_token = None
 
-    def login(self, username: str, password: str) -> model.login.Login:
+    def login(self, username: str, password: str) -> uniman.model.login.Login:
         self.session = Session()
 
         request = Endpoints.LOGIN.value.to_request(
@@ -35,7 +32,7 @@ class GenericUniFiClient:
         response = self._send(request)
         self.csrf_token = response.headers.get('X-CSRF-Token')
 
-        return model.login.Login(response.json())
+        return uniman.model.login.Login(response.json())
 
     def query(self, endpoint: Endpoint, T) -> T:
         self._csrf()

@@ -1,5 +1,6 @@
 {
     "$schema": "http://json-schema.org/schema#",
+    "title": "FirewallGroup",
     "type": "object",
     "properties": {
         "meta": {
@@ -21,23 +22,20 @@
                     "_id": {
                         "type": "string"
                     },
-                    "site_id": {
+                    "group_type": {
                         "type": "string"
                     },
                     "name": {
                         "type": "string"
                     },
-                    "attr_hidden_id": {
+                    "group_members": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "site_id": {
                         "type": "string"
-                    },
-                    "attr_no_delete": {
-                        "type": "boolean"
-                    },
-                    "qos_rate_max_up": {
-                        "type": "integer"
-                    },
-                    "qos_rate_max_down": {
-                        "type": "integer"
                     }
                 },
                 "required": []

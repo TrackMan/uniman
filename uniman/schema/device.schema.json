@@ -1,5 +1,6 @@
 {
     "$schema": "http://json-schema.org/schema#",
+    "title": "Device",
     "type": "object",
     "properties": {
         "meta": {
@@ -1023,10 +1024,7 @@
                                     "type": "null"
                                 },
                                 "ast_be_xmit": {
-                                    "type": [
-                                        "integer",
-                                        "null"
-                                    ]
+                                    "type": "integer"
                                 },
                                 "cu_total": {
                                     "type": "integer"

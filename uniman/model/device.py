@@ -388,7 +388,7 @@ class RadioTableStatsItem(Object):
 
     ast_cst: None = Property(Null(), required=True)
 
-    ast_be_xmit: Union[int, None] = Property(AnyOf(Integer(), Null()), required=True)
+    ast_be_xmit: int = Property(Integer(), required=True)
 
     cu_total: int = Property(Integer(), required=True)
 

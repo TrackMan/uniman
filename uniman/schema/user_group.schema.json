@@ -1,5 +1,6 @@
 {
     "$schema": "http://json-schema.org/schema#",
+    "title": "UserGroup",
     "type": "object",
     "properties": {
         "meta": {
@@ -21,20 +22,23 @@
                     "_id": {
                         "type": "string"
                     },
-                    "group_type": {
+                    "site_id": {
                         "type": "string"
                     },
                     "name": {
                         "type": "string"
                     },
-                    "group_members": {
-                        "type": "array",
-                        "items": {
-                            "type": "string"
-                        }
-                    },
-                    "site_id": {
+                    "attr_hidden_id": {
                         "type": "string"
+                    },
+                    "attr_no_delete": {
+                        "type": "boolean"
+                    },
+                    "qos_rate_max_up": {
+                        "type": "integer"
+                    },
+                    "qos_rate_max_down": {
+                        "type": "integer"
                     }
                 },
                 "required": []

@@ -46,7 +46,8 @@ class Endpoints(Enum):
     FIREWALL_RULE = Endpoint('rest/firewallrule', 'GET')
     NETWORK_CONF = Endpoint('rest/networkconf', 'GET')
     ROUTING = Endpoint('rest/routing', 'GET')
-    SELF = Endpoint('self', 'GET')
+    # TODO: Generates invalid code
+    # SELF_INFO = Endpoint('self', 'GET')
     SYS_INFO = Endpoint('stat/sysinfo', 'GET')
     USER_GROUP = Endpoint('rest/usergroup', 'GET')
     WLAN_CONF = Endpoint('rest/wlanconf', 'GET')

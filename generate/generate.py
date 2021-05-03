@@ -6,11 +6,12 @@ import statham
 import statham.schema.parser
 import statham.titles
 from genson import SchemaBuilder
+from jinja2 import Environment, PackageLoader
 from json_ref_dict import RefDict
 from requests import Session
 from statham.serializers import serialize_python
 
-from client.endpoints import Endpoints
+from uniman.endpoints import Endpoints
 
 
 def generate():
@@ -19,6 +20,12 @@ def generate():
     username = os.environ['UNIFI_USER']
     password = os.environ['UNIFI_PASS']
     site = os.environ['UNIFI_SITE']
+
+    jinja = Environment(loader=PackageLoader('generate', 'templates'))
+    template = jinja.get_template('client.py')
+
+    with open('uniman' + os.path.sep + 'client.py', 'w') as client_py:
+        client_py.write(template.render(endpoints=Endpoints))
 
     payloads = {
         Endpoints.LOGIN.name: {'username': username, 'password': password}
@@ -32,11 +39,12 @@ def generate():
 
         builder = SchemaBuilder()
         builder.add_object(response.json())
+        builder.add_schema({'title': endpoint.name.title().replace('_', '')})
         builder.add_schema({'required': []})
         builder.add_schema({'properties': {'data': {'items': {'required': []}}}})
         schema = json.loads(builder.to_json())
 
-        schema_path = 'schema' + os.path.sep + endpoint.name.lower() + '.schema.json'
+        schema_path = 'uniman' + os.path.sep + 'schema' + os.path.sep + endpoint.name.lower() + '.schema.json'
         schema_file = open(schema_path, 'w')
         schema_file.write(json.dumps(schema, indent=4))
         schema_file.close()
@@ -48,7 +56,7 @@ def generate():
         parsed_schema = statham.schema.parser.parse(json_schema)
         python_class = serialize_python(*parsed_schema)
 
-        python_class_file = open('model' + os.path.sep + endpoint.name.lower() + '.py', 'w')
+        python_class_file = open('uniman' + os.path.sep + 'model' + os.path.sep + endpoint.name.lower() + '.py', 'w')
         python_class_file.write(python_class)
         python_class_file.close()
 
