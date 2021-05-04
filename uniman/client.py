@@ -1,3 +1,5 @@
+from typing import TypeVar
+
 import uniman.model.login
 import uniman.model.device
 import uniman.model.dhcp_option
@@ -13,130 +15,131 @@ from uniman.generic_client import GenericUniFiClient
 
 
 class UniFiClient:
+    T = TypeVar('T')
     client: GenericUniFiClient
 
     def __init__(self, client: GenericUniFiClient):
         self.client = client
 
-    def login(self, username: str, password: str) -> uniman.model.login.Login:
-        return self.client.login(username, password)
+    def login(self, username: str, password: str, T=uniman.model.login.Login) -> T:
+        return self.client.login(username, password, T)
 
-    def query_logins(self) -> uniman.model.login.Login:
-        return self.client.query(Endpoints.LOGIN.value, uniman.model.login.Login)
+    def query_logins(self, T=uniman.model.login.Login) -> T:
+        return self.client.query(Endpoints.LOGIN, T)
 
-    def delete_login(self, uid: str) -> uniman.model.login.Login:
-        return self.client.delete(Endpoints.LOGIN.value, uniman.model.login.Login, uid)
+    def delete_login(self, uid: str, T=uniman.model.login.Login) -> T:
+        return self.client.delete(Endpoints.LOGIN, uid, T)
 
-    def update_login(self, data) -> uniman.model.login.Login:
-        return self.client.update(Endpoints.LOGIN.value, uniman.model.login.Login, data)
+    def update_login(self, data, T=uniman.model.login.Login) -> T:
+        return self.client.update(Endpoints.LOGIN, data, T)
 
-    def create_login(self, data) -> uniman.model.login.Login:
-        return self.client.create(Endpoints.LOGIN.value, uniman.model.login.Login, data)
+    def create_login(self, data, T=uniman.model.login.Login) -> T:
+        return self.client.create(Endpoints.LOGIN, data, T)
 
-    def query_devices(self) -> uniman.model.device.Device:
-        return self.client.query(Endpoints.DEVICE.value, uniman.model.device.Device)
+    def query_devices(self, T=uniman.model.device.Device) -> T:
+        return self.client.query(Endpoints.DEVICE, T)
 
-    def delete_device(self, uid: str) -> uniman.model.device.Device:
-        return self.client.delete(Endpoints.DEVICE.value, uniman.model.device.Device, uid)
+    def delete_device(self, uid: str, T=uniman.model.device.Device) -> T:
+        return self.client.delete(Endpoints.DEVICE, uid, T)
 
-    def update_device(self, data) -> uniman.model.device.Device:
-        return self.client.update(Endpoints.DEVICE.value, uniman.model.device.Device, data)
+    def update_device(self, data, T=uniman.model.device.Device) -> T:
+        return self.client.update(Endpoints.DEVICE, data, T)
 
-    def create_device(self, data) -> uniman.model.device.Device:
-        return self.client.create(Endpoints.DEVICE.value, uniman.model.device.Device, data)
+    def create_device(self, data, T=uniman.model.device.Device) -> T:
+        return self.client.create(Endpoints.DEVICE, data, T)
 
-    def query_dhcp_options(self) -> uniman.model.dhcp_option.DhcpOption:
-        return self.client.query(Endpoints.DHCP_OPTION.value, uniman.model.dhcp_option.DhcpOption)
+    def query_dhcp_options(self, T=uniman.model.dhcp_option.DhcpOption) -> T:
+        return self.client.query(Endpoints.DHCP_OPTION, T)
 
-    def delete_dhcp_option(self, uid: str) -> uniman.model.dhcp_option.DhcpOption:
-        return self.client.delete(Endpoints.DHCP_OPTION.value, uniman.model.dhcp_option.DhcpOption, uid)
+    def delete_dhcp_option(self, uid: str, T=uniman.model.dhcp_option.DhcpOption) -> T:
+        return self.client.delete(Endpoints.DHCP_OPTION, uid, T)
 
-    def update_dhcp_option(self, data) -> uniman.model.dhcp_option.DhcpOption:
-        return self.client.update(Endpoints.DHCP_OPTION.value, uniman.model.dhcp_option.DhcpOption, data)
+    def update_dhcp_option(self, data, T=uniman.model.dhcp_option.DhcpOption) -> T:
+        return self.client.update(Endpoints.DHCP_OPTION, data, T)
 
-    def create_dhcp_option(self, data) -> uniman.model.dhcp_option.DhcpOption:
-        return self.client.create(Endpoints.DHCP_OPTION.value, uniman.model.dhcp_option.DhcpOption, data)
+    def create_dhcp_option(self, data, T=uniman.model.dhcp_option.DhcpOption) -> T:
+        return self.client.create(Endpoints.DHCP_OPTION, data, T)
 
-    def query_firewall_groups(self) -> uniman.model.firewall_group.FirewallGroup:
-        return self.client.query(Endpoints.FIREWALL_GROUP.value, uniman.model.firewall_group.FirewallGroup)
+    def query_firewall_groups(self, T=uniman.model.firewall_group.FirewallGroup) -> T:
+        return self.client.query(Endpoints.FIREWALL_GROUP, T)
 
-    def delete_firewall_group(self, uid: str) -> uniman.model.firewall_group.FirewallGroup:
-        return self.client.delete(Endpoints.FIREWALL_GROUP.value, uniman.model.firewall_group.FirewallGroup, uid)
+    def delete_firewall_group(self, uid: str, T=uniman.model.firewall_group.FirewallGroup) -> T:
+        return self.client.delete(Endpoints.FIREWALL_GROUP, uid, T)
 
-    def update_firewall_group(self, data) -> uniman.model.firewall_group.FirewallGroup:
-        return self.client.update(Endpoints.FIREWALL_GROUP.value, uniman.model.firewall_group.FirewallGroup, data)
+    def update_firewall_group(self, data, T=uniman.model.firewall_group.FirewallGroup) -> T:
+        return self.client.update(Endpoints.FIREWALL_GROUP, data, T)
 
-    def create_firewall_group(self, data) -> uniman.model.firewall_group.FirewallGroup:
-        return self.client.create(Endpoints.FIREWALL_GROUP.value, uniman.model.firewall_group.FirewallGroup, data)
+    def create_firewall_group(self, data, T=uniman.model.firewall_group.FirewallGroup) -> T:
+        return self.client.create(Endpoints.FIREWALL_GROUP, data, T)
 
-    def query_firewall_rules(self) -> uniman.model.firewall_rule.FirewallRule:
-        return self.client.query(Endpoints.FIREWALL_RULE.value, uniman.model.firewall_rule.FirewallRule)
+    def query_firewall_rules(self, T=uniman.model.firewall_rule.FirewallRule) -> T:
+        return self.client.query(Endpoints.FIREWALL_RULE, T)
 
-    def delete_firewall_rule(self, uid: str) -> uniman.model.firewall_rule.FirewallRule:
-        return self.client.delete(Endpoints.FIREWALL_RULE.value, uniman.model.firewall_rule.FirewallRule, uid)
+    def delete_firewall_rule(self, uid: str, T=uniman.model.firewall_rule.FirewallRule) -> T:
+        return self.client.delete(Endpoints.FIREWALL_RULE, uid, T)
 
-    def update_firewall_rule(self, data) -> uniman.model.firewall_rule.FirewallRule:
-        return self.client.update(Endpoints.FIREWALL_RULE.value, uniman.model.firewall_rule.FirewallRule, data)
+    def update_firewall_rule(self, data, T=uniman.model.firewall_rule.FirewallRule) -> T:
+        return self.client.update(Endpoints.FIREWALL_RULE, data, T)
 
-    def create_firewall_rule(self, data) -> uniman.model.firewall_rule.FirewallRule:
-        return self.client.create(Endpoints.FIREWALL_RULE.value, uniman.model.firewall_rule.FirewallRule, data)
+    def create_firewall_rule(self, data, T=uniman.model.firewall_rule.FirewallRule) -> T:
+        return self.client.create(Endpoints.FIREWALL_RULE, data, T)
 
-    def query_network_confs(self) -> uniman.model.network_conf.NetworkConf:
-        return self.client.query(Endpoints.NETWORK_CONF.value, uniman.model.network_conf.NetworkConf)
+    def query_network_confs(self, T=uniman.model.network_conf.NetworkConf) -> T:
+        return self.client.query(Endpoints.NETWORK_CONF, T)
 
-    def delete_network_conf(self, uid: str) -> uniman.model.network_conf.NetworkConf:
-        return self.client.delete(Endpoints.NETWORK_CONF.value, uniman.model.network_conf.NetworkConf, uid)
+    def delete_network_conf(self, uid: str, T=uniman.model.network_conf.NetworkConf) -> T:
+        return self.client.delete(Endpoints.NETWORK_CONF, uid, T)
 
-    def update_network_conf(self, data) -> uniman.model.network_conf.NetworkConf:
-        return self.client.update(Endpoints.NETWORK_CONF.value, uniman.model.network_conf.NetworkConf, data)
+    def update_network_conf(self, data, T=uniman.model.network_conf.NetworkConf) -> T:
+        return self.client.update(Endpoints.NETWORK_CONF, data, T)
 
-    def create_network_conf(self, data) -> uniman.model.network_conf.NetworkConf:
-        return self.client.create(Endpoints.NETWORK_CONF.value, uniman.model.network_conf.NetworkConf, data)
+    def create_network_conf(self, data, T=uniman.model.network_conf.NetworkConf) -> T:
+        return self.client.create(Endpoints.NETWORK_CONF, data, T)
 
-    def query_routings(self) -> uniman.model.routing.Routing:
-        return self.client.query(Endpoints.ROUTING.value, uniman.model.routing.Routing)
+    def query_routings(self, T=uniman.model.routing.Routing) -> T:
+        return self.client.query(Endpoints.ROUTING, T)
 
-    def delete_routing(self, uid: str) -> uniman.model.routing.Routing:
-        return self.client.delete(Endpoints.ROUTING.value, uniman.model.routing.Routing, uid)
+    def delete_routing(self, uid: str, T=uniman.model.routing.Routing) -> T:
+        return self.client.delete(Endpoints.ROUTING, uid, T)
 
-    def update_routing(self, data) -> uniman.model.routing.Routing:
-        return self.client.update(Endpoints.ROUTING.value, uniman.model.routing.Routing, data)
+    def update_routing(self, data, T=uniman.model.routing.Routing) -> T:
+        return self.client.update(Endpoints.ROUTING, data, T)
 
-    def create_routing(self, data) -> uniman.model.routing.Routing:
-        return self.client.create(Endpoints.ROUTING.value, uniman.model.routing.Routing, data)
+    def create_routing(self, data, T=uniman.model.routing.Routing) -> T:
+        return self.client.create(Endpoints.ROUTING, data, T)
 
-    def query_sys_infos(self) -> uniman.model.sys_info.SysInfo:
-        return self.client.query(Endpoints.SYS_INFO.value, uniman.model.sys_info.SysInfo)
+    def query_sys_infos(self, T=uniman.model.sys_info.SysInfo) -> T:
+        return self.client.query(Endpoints.SYS_INFO, T)
 
-    def delete_sys_info(self, uid: str) -> uniman.model.sys_info.SysInfo:
-        return self.client.delete(Endpoints.SYS_INFO.value, uniman.model.sys_info.SysInfo, uid)
+    def delete_sys_info(self, uid: str, T=uniman.model.sys_info.SysInfo) -> T:
+        return self.client.delete(Endpoints.SYS_INFO, uid, T)
 
-    def update_sys_info(self, data) -> uniman.model.sys_info.SysInfo:
-        return self.client.update(Endpoints.SYS_INFO.value, uniman.model.sys_info.SysInfo, data)
+    def update_sys_info(self, data, T=uniman.model.sys_info.SysInfo) -> T:
+        return self.client.update(Endpoints.SYS_INFO, data, T)
 
-    def create_sys_info(self, data) -> uniman.model.sys_info.SysInfo:
-        return self.client.create(Endpoints.SYS_INFO.value, uniman.model.sys_info.SysInfo, data)
+    def create_sys_info(self, data, T=uniman.model.sys_info.SysInfo) -> T:
+        return self.client.create(Endpoints.SYS_INFO, data, T)
 
-    def query_user_groups(self) -> uniman.model.user_group.UserGroup:
-        return self.client.query(Endpoints.USER_GROUP.value, uniman.model.user_group.UserGroup)
+    def query_user_groups(self, T=uniman.model.user_group.UserGroup) -> T:
+        return self.client.query(Endpoints.USER_GROUP, T)
 
-    def delete_user_group(self, uid: str) -> uniman.model.user_group.UserGroup:
-        return self.client.delete(Endpoints.USER_GROUP.value, uniman.model.user_group.UserGroup, uid)
+    def delete_user_group(self, uid: str, T=uniman.model.user_group.UserGroup) -> T:
+        return self.client.delete(Endpoints.USER_GROUP, uid, T)
 
-    def update_user_group(self, data) -> uniman.model.user_group.UserGroup:
-        return self.client.update(Endpoints.USER_GROUP.value, uniman.model.user_group.UserGroup, data)
+    def update_user_group(self, data, T=uniman.model.user_group.UserGroup) -> T:
+        return self.client.update(Endpoints.USER_GROUP, data, T)
 
-    def create_user_group(self, data) -> uniman.model.user_group.UserGroup:
-        return self.client.create(Endpoints.USER_GROUP.value, uniman.model.user_group.UserGroup, data)
+    def create_user_group(self, data, T=uniman.model.user_group.UserGroup) -> T:
+        return self.client.create(Endpoints.USER_GROUP, data, T)
 
-    def query_wlan_confs(self) -> uniman.model.wlan_conf.WlanConf:
-        return self.client.query(Endpoints.WLAN_CONF.value, uniman.model.wlan_conf.WlanConf)
+    def query_wlan_confs(self, T=uniman.model.wlan_conf.WlanConf) -> T:
+        return self.client.query(Endpoints.WLAN_CONF, T)
 
-    def delete_wlan_conf(self, uid: str) -> uniman.model.wlan_conf.WlanConf:
-        return self.client.delete(Endpoints.WLAN_CONF.value, uniman.model.wlan_conf.WlanConf, uid)
+    def delete_wlan_conf(self, uid: str, T=uniman.model.wlan_conf.WlanConf) -> T:
+        return self.client.delete(Endpoints.WLAN_CONF, uid, T)
 
-    def update_wlan_conf(self, data) -> uniman.model.wlan_conf.WlanConf:
-        return self.client.update(Endpoints.WLAN_CONF.value, uniman.model.wlan_conf.WlanConf, data)
+    def update_wlan_conf(self, data, T=uniman.model.wlan_conf.WlanConf) -> T:
+        return self.client.update(Endpoints.WLAN_CONF, data, T)
 
-    def create_wlan_conf(self, data) -> uniman.model.wlan_conf.WlanConf:
-        return self.client.create(Endpoints.WLAN_CONF.value, uniman.model.wlan_conf.WlanConf, data)
+    def create_wlan_conf(self, data, T=uniman.model.wlan_conf.WlanConf) -> T:
+        return self.client.create(Endpoints.WLAN_CONF, data, T)

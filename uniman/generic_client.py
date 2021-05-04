@@ -3,8 +3,7 @@ from typing import TypeVar
 from requests import Session, Request, Response
 from statham.schema.constants import NotPassed
 
-import uniman.model.login
-from uniman.endpoints import Endpoints, Endpoint
+from uniman.endpoints import Endpoints
 
 
 class GenericUniFiClient:
@@ -21,7 +20,7 @@ class GenericUniFiClient:
         self.site = site
         self.csrf_token = None
 
-    def login(self, username: str, password: str) -> uniman.model.login.Login:
+    def login(self, username: str, password: str, T=dict) -> T:
         self.session = Session()
 
         request = Endpoints.LOGIN.value.to_request(
@@ -32,40 +31,40 @@ class GenericUniFiClient:
         response = self._send(request)
         self.csrf_token = response.headers.get('X-CSRF-Token')
 
-        return uniman.model.login.Login(response.json())
+        return T(response.json())
 
-    def query(self, endpoint: Endpoint, T) -> T:
+    def query(self, endpoint: Endpoints, T=dict) -> T:
         self._csrf()
 
-        request = endpoint.to_request(
+        request = endpoint.value.to_request(
             self.host, self.port, self.site
         )
 
         return T(self._send(request).json())
 
-    def delete(self, endpoint: Endpoint, T, id: str) -> T:
+    def delete(self, endpoint: Endpoints, id: str, T=dict) -> T:
         self._csrf()
 
-        request = endpoint.to_request(
+        request = endpoint.value.to_request(
             self.host, self.port, self.site, method='DELETE', path=id
         )
 
         return T(self._send(request).json())
 
-    def update(self, endpoint: Endpoint, T, data) -> T:
+    def update(self, endpoint: Endpoints, data, T=dict) -> T:
         self._csrf()
 
-        request = endpoint.to_request(
-            self.host, self.port, self.site, method='PUT', path=data._id,
+        request = endpoint.value.to_request(
+            self.host, self.port, self.site, method='PUT', path=data['_id'] or data._id,
             payload=self.__payload(self, data)
         )
 
         return T(self._send(request).json())
 
-    def create(self, endpoint: Endpoint, T, data) -> T:
+    def create(self, endpoint: Endpoints, data, T=dict) -> T:
         self._csrf()
 
-        request = endpoint.to_request(
+        request = endpoint.value.to_request(
             self.host, self.port, self.site, method='POST',
             payload=self.__payload(self, data)
         )

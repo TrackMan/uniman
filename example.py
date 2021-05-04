@@ -16,8 +16,8 @@ if __name__ == '__main__':
     generic_client = GenericUniFiClient(host, port, site)
     login = generic_client.login(username, password)
 
-    sys_info = generic_client.query(Endpoints.SYS_INFO.value, uniman.model.sys_info.SysInfo)
-    print(sys_info.data[0].name)
+    sys_info = generic_client.query(Endpoints.SYS_INFO)
+    print(sys_info['data'][0]['name'])
 
     new_rule = {
         'ruleset': 'WAN_LOCAL',
@@ -45,18 +45,18 @@ if __name__ == '__main__':
         'dst_networkconf_type': 'NETv4'
     }
 
-    created = generic_client.create(Endpoints.FIREWALL_RULE.value, uniman.model.firewall_rule.FirewallRule, new_rule)
-    rule_id = created.data[0]._id
+    created = generic_client.create(Endpoints.FIREWALL_RULE, new_rule)
+    rule_id = created['data'][0]['_id']
 
-    rules = generic_client.query(Endpoints.FIREWALL_RULE.value, uniman.model.firewall_rule.FirewallRule)
-    rule = next(r for r in rules.data if rule_id == r._id)
-    rule.name = 'Hello World'
+    rules = generic_client.query(Endpoints.FIREWALL_RULE)
+    rule = next(r for r in rules['data'] if rule_id == r['_id'])
+    rule['name'] = 'Hello World'
 
-    updated = generic_client.update(Endpoints.FIREWALL_RULE.value, uniman.model.firewall_rule.FirewallRule, rule)
-    assert rule.name == updated.data[0].name
+    updated = generic_client.update(Endpoints.FIREWALL_RULE, rule)
+    assert rule['name'] == updated['data'][0]['name']
 
-    deleted = generic_client.delete(Endpoints.FIREWALL_RULE.value, uniman.model.firewall_rule.FirewallRule, rule_id)
-    assert 'ok' == deleted.meta.rc
+    deleted = generic_client.delete(Endpoints.FIREWALL_RULE, rule_id)
+    assert 'ok' == deleted['meta']['rc']
 
     # Use a type-safe client
 
